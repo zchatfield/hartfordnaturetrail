@@ -1,7 +1,48 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Below is Leaflet related code-->
+   <meta charset="utf-8">
+   <meta name="viewport" content="" width=device-width, initial-scale=1.9>
+   <!--more leaflet code -->
+   <link
+     rel="stylesheet"
+     href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+   <link rel="stylesheet" type="text/css" href="css/map_style.css">
+
+   <script
+     src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin="">
+   </script>
+
+   <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-search@d4cbd36122efc8d17152b4177ed0e12165305441/dist/css/L.Control.OpenCageData.Search.min.css"/>
+
+ <script src="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-geocoding@v2.0.0/dist/js/L.Control.OpenCageGeocoding.min.js"></script>
+ <!-- Leaflet plug ins-->
+   <script src="javascript/zoomslider/L.Control.Zoomslider.js"></script>
+   <script src="javascript/timezones.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css"/>
+   <script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
+ <script src="javascript/Leaflet.CountrySelect.js"></script>
+   <script src="javascript/countries.geo.json"></script>
+ <!-- Visible Text at top of tab below-->
+   <title>South Nature Trail</title>
 </head>
 <body>
+<!-- Put introductory info here -->
+  <div id="header">
+    <h3></h3>
+  </div>
+
+<!-- Leaflet map here -->
+  <div id="map" style="width: 700px; height: 500px; margin:auto;">
+  </div>
+
 </body>
+<footer>
+</footer>
 </html>
