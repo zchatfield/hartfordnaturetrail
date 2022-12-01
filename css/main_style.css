@@ -7,36 +7,25 @@ Colorblind safe color palette from colorbrewer2.org.
 #018571 - dark green
 */
 
-body {
-/* 4.	This changed the spacing of the header area to the top of the webpage
-(removing the previous spacing that was there). */
+/*body {
   background-color: #dfc27d;
   color: #a6611a;
   text-align: center;
   margin: 0;
-}
+}*/
 
-h1 {
-/* 2.	This changed the distance between the header and the section below it,
-which was the profile picture. */
-  color:#018571;
-  padding: 5px;
+h3 {
+  color:#f5f5f5;
   margin: 0;
 }
 
-footer {
+#header {
   background-color: #018571;
-  color: #f5f5f5;
-  padding: 20px;
-  margin: 10px 0px;
-  text-align: center;
+  padding: 10px;
 }
 
-#body-container{
-/* 3.	This modified the background color and frame for the body section of the website.
-By adding a border with a specifically sized background box,
-it also means that the original background color set is still visible outside of
-the newly created container. */
+
+/*#body-container{
   background-color: #f5f5f5;
   max-width: 1000px;
   margin: auto;
@@ -44,109 +33,4 @@ the newly created container. */
   border: 2px solid #018571;
   border-radius: 25px;
   overflow: scroll;
-}
-
-#header{
-/* 1.	Changed the background color just behind the section of the website where the header text is. */
-  background-color: #80cdc1
-}
-
-#profile-picture{
-/* 5.	This changed the placement of things within the body container.
-It moved the image to the top left side of the body of the website below the header,
-and the body “welcome text” moved to the top right. */
-  float:left;
-  padding: 1em;
-}
-
-#welcome-text{
-  padding-top: 25px;
-  font-size: 25px;
-}
-
-#research-interests{
-/* 6.	This moved the alignment of the “research interests”
-part of the body text to center-left,
-and also changed (increased) the size of the text. */
-  text-align: left;
-  font-size: 20px;
-  position: relative;
-  left: 50px
-}
-
-#copyright {
-  position: relative;
-  width: 1000px;
-  text-align: center;
-  bottom: 20px;
-}
-
-#copyright_map {
-  position: relative;
-  width: 1000px;
-  text-align: center;
-  bottom: 20px;
-  padding:inherit;
-}
-
-#webmap-reviews{
-  text-align:left;
-  font-size: 25px;
-  position: relative;
-  padding: 1em;
-}
-
-#area_calculator{
-  text-align:center;
-  position: relative;
-  font-size: 20px;
-  border: 5px solid #018571;
-  border-radius: 10px;
-  margin-left:345px;
-  margin-right: 345px;
-  padding: 20px;
-}
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #a6611a;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: left;
-  text-align: left;
-  display: inline-block;
-  padding: 20px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #dfc27d;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #018571;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #80cdc1;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color:#018571;}
+}*/
