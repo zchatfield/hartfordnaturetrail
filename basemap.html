@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<!-- Below is Leaflet related code-->
+<!-- Below is Leaflet related code -->
    <meta charset="utf-8">
    <meta name="viewport" content="" width=device-width, initial-scale=1.9>
 <!--Leaflet styling -->
@@ -10,7 +10,7 @@
      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
      crossorigin=""/>
-   <link rel="stylesheet" type="text/css" href="css/map_style.css">
+   <!-- <link rel="stylesheet" type="text/css" href="css/map_style.css"> -->
 
    <script
      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
@@ -21,20 +21,25 @@
     <link rel="stylesheet"
      href="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-search@d4cbd36122efc8d17152b4177ed0e12165305441/dist/css/L.Control.OpenCageData.Search.min.css"/>
      <script src="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-geocoding@v2.0.0/dist/js/L.Control.OpenCageGeocoding.min.js"></script>
+<!--the link below is leaflet API-->
+         <script src="javascript/secret_key.js"></script>
  <!-- Leaflet plug ins-->
-   <script src="javascript/zoomslider/L.Control.Zoomslider.js"></script>
+
  <!-- Visible Text at top of tab below-->
    <title>South Hartford Nature Trail</title>
+
 </head>
 
 <body>
 <!-- Put introductory info here - description of the nature trail and links to org. partners -->
+<div id="body-container">
   <div id="header">
     <h3></h3>
   </div>
-
+</div>
 <!-- Leaflet map here -->
   <div id="map" style="width: 700px; height: 500px; margin:auto;">
+    <script src="javascript/map.js"></script>
   </div>
 
 </body>
