@@ -11,7 +11,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 12);
   }).addTo(map);
 
 // Districts geojson added
-  function style(feature) {
+  function style1(feature) {
     return {
       color: 'red',
       weight: 1,
@@ -20,7 +20,19 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 12);
     };
   }
 
-  L.geoJson(districts, {style: style}).addTo(map);
+  L.geoJson(districts, {style: style1}).addTo(map);
+
+// Green spaces added
+  function style2(feature) {
+    return {
+      color: 'green',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.4
+    };
+  }
+
+  L.geoJson(greenspaces, {style: style2}).addTo(map);
 
 // Reset View plug in
   L.control.resetView({
