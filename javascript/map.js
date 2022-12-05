@@ -23,12 +23,36 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
           	},
           }).addTo(map);
 
+// Bike routes geojson added
+  L.geoJson(bike_routes, {
+            style: function (feature) {
+              return {
+                color: 'blue',
+                fillOpacity: '0',
+                weight: 1,
+                opacity: 1
+              };
+            },
+          }).addTo(map);
+
+// Walking paths geojson added
+  // L.geoJson(paths, {
+  //           style: function (feature) {
+  //             return {
+  //               color: 'red',
+  //               fillOpacity: '0',
+  //               weight: 1,
+  //               opacity: 1
+  //             };
+  //           },
+  //         }).addTo(map);
+
 // Green spaces added from geojson, adding popup information
 var green = L.geoJson(greenspaces, {
         	style: function (feature) {
         		return {
               color: 'green',
-              fillOpacity: '0.4',
+              fillOpacity: '0.6',
               weight: 1
             };
         	},
@@ -40,19 +64,6 @@ var green = L.geoJson(greenspaces, {
   green.on('click', function(e){
     map.setView(e.latlng, 16);
   })
-
-
-// Bike routes geojson added
-L.geoJson(bike_routes, {
-          style: function (feature) {
-            return {
-              color: 'blue',
-              fillOpacity: '0',
-              weight: 1,
-              opacity: 1
-            };
-          },
-        }).addTo(map);
 
 
 // Reset View plug in
@@ -70,6 +81,8 @@ var legend = L.control({ position: "bottomright" });
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += '<i style="background: green"></i><span>Green Spaces</span><br>';
     div.innerHTML += '<i style="background: black"></i><span>Districts</span><br>';
+    div.innerHTML += '<i style="background: blue"></i><span>Bike Routes</span><br>';
+    //div.innerHTML += '<i style="background: red"></i><span>Walking Paths</span><br>';
     return div;
   };
 legend.addTo(map);
