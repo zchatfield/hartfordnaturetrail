@@ -10,6 +10,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
       accessToken: mapbox_access_token,
   }).addTo(map);
 
+
 // Districts geojson added
   function style1(feature) {
     return {
@@ -22,8 +23,9 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
 
   L.geoJson(districts, {style: style1}).addTo(map);
 
+
 // Green spaces added from geojson, adding popup information
-  green = L.geoJson(greenspaces, {
+var green = L.geoJson(greenspaces, {
         	style: function (feature) {
         		return {
               color: 'green',
@@ -39,6 +41,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
   green.on('click', function(e){
     map.setView(e.latlng, 16);
   })
+
 
 // Reset View plug in
   L.control.resetView({
@@ -59,5 +62,29 @@ var legend = L.control({ position: "bottomright" });
   };
 legend.addTo(map);
 
+
 // Scale bar
 L.control.scale().addTo(map);
+
+
+// Search Bar
+var searchControl = new L.Control.Search({
+		layer: green,
+		propertyName: 'name',
+		marker: false,
+    position: "topright",
+		moveToLocation: function(latlng, title, map) {
+  			map.setView(latlng, 16);
+		}
+	});
+
+	searchControl.on('search:locationfound', function(e) {
+		if(e.layer._popup)
+			e.layer.openPopup();
+
+	}).on('search:collapsed', function(e) {
+		featuresLayer.eachLayer(function(layer) {
+		});
+	});
+
+	map.addControl(searchControl);
