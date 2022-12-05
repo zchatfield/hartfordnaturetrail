@@ -12,17 +12,16 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
 
 
 // Districts geojson added
-  function style1(feature) {
-    return {
-      color: 'black',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0
-    };
-  }
-
-  L.geoJson(districts, {style: style1}).addTo(map);
-
+  L.geoJson(districts, {
+          	style: function (feature) {
+          		return {
+                color: 'black',
+                fillOpacity: '0',
+                weight: 1,
+                opacity: 1
+              };
+          	},
+          }).addTo(map);
 
 // Green spaces added from geojson, adding popup information
 var green = L.geoJson(greenspaces, {
@@ -41,6 +40,19 @@ var green = L.geoJson(greenspaces, {
   green.on('click', function(e){
     map.setView(e.latlng, 16);
   })
+
+
+// Bike routes geojson added
+L.geoJson(bike_routes, {
+          style: function (feature) {
+            return {
+              color: 'blue',
+              fillOpacity: '0',
+              weight: 1,
+              opacity: 1
+            };
+          },
+        }).addTo(map);
 
 
 // Reset View plug in
