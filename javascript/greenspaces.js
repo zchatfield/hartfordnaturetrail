@@ -3,7 +3,10 @@ var greenspaces = {
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Pope Park",
+        "popupContent": "This is Pope Park!"
+      },
       "geometry": {
         "coordinates": [
           [
