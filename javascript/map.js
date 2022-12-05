@@ -1,6 +1,6 @@
 
 // Map variable with center and zoom
-var map = L.map('mapid').setView([41.7658, -72.6734], 12);
+var map = L.map('mapid').setView([41.7658, -72.6734], 13);
 
 
 // Basemap
@@ -23,7 +23,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 12);
   L.geoJson(districts, {style: style1}).addTo(map);
 
 // Green spaces added from geojson, adding popup information
-green = L.geoJson(greenspaces, {
+  green = L.geoJson(greenspaces, {
         	style: function (feature) {
         		return {
               color: 'green',
@@ -36,16 +36,16 @@ green = L.geoJson(greenspaces, {
         	},
         }).addTo(map);
 
-        green.on('click', function(e){
-          map.setView(e.latlng, 16);
-        })
+  green.on('click', function(e){
+    map.setView(e.latlng, 16);
+  })
 
 // Reset View plug in
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
       latlng: L.latLng([41.7658, -72.6734]),
-      zoom: 12,
+      zoom: 13,
   }).addTo(map);
 
 
@@ -58,3 +58,6 @@ var legend = L.control({ position: "bottomright" });
     return div;
   };
 legend.addTo(map);
+
+// Scale bar
+L.control.scale().addTo(map);
