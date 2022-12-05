@@ -13,7 +13,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 12);
 // Districts geojson added
   function style1(feature) {
     return {
-      color: 'red',
+      color: 'black',
       weight: 1,
       opacity: 1,
       fillOpacity: 0
