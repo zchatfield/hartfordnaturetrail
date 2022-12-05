@@ -22,8 +22,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 12);
 
   L.geoJson(districts, {style: style1}).addTo(map);
 
-// Green spaces added
-
+// Green spaces added from geojson, adding popup information
 green = L.geoJson(greenspaces, {
         	style: function (feature) {
         		return {
@@ -48,3 +47,14 @@ green = L.geoJson(greenspaces, {
       latlng: L.latLng([41.7658, -72.6734]),
       zoom: 12,
   }).addTo(map);
+
+
+// Legend of layers
+var legend = L.control({ position: "bottomright" });
+  legend.onAdd = function(map) {
+    var div = L.DomUtil.create("div", "legend");
+    div.innerHTML += '<i style="background: green"></i><span>Green Spaces</span><br>';
+    div.innerHTML += '<i style="background: black"></i><span>Districts</span><br>';
+    return div;
+  };
+legend.addTo(map);
