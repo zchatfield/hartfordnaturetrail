@@ -7,27 +7,54 @@ Colorblind safe color palette from colorbrewer2.org.
 #018571 - dark green
 */
 
+/* Other hex codes
+#008000 - green
+#d6eecd - light green
+#808080 - gray
+*/
+
 
 h2 {
   color:#f5f5f5;
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
-  color:#f5f5f5;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+#body-container {
+  width: 350px;
+  float: left;
+}
+
 
 #header {
-  background-color: #018571;
-  padding: 10px;
+  background-color: #008000;
+  height: 70px;
+  box-shadow: 0px 5px 8px grey;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  z-index: 2;
 }
 
+#body-content{
+  height: 570px;
+  position: relative;
+  float: left;
+  background-color: #d6eecd;
+  text-align: left;
+  padding: 10px;
+  z-index: 1;
+}
 
-#body-container{
-  background-color: #018571;
-  width: 350px;
-  height: 100vh;
-  float: left
+#copyright{
+  text-align: center;
+  size: 5px;
+  padding: 0px;
 }
 
 

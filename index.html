@@ -15,9 +15,6 @@
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
      crossorigin=""/>
 
-<!--Map style sheet-->
-   <link rel="stylesheet" type="text/css" href="css/map_style.css">
-
 <!--Leaflet js file-->
    <script
      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
@@ -51,17 +48,29 @@
 <div id="body-container">
   <div id="header">
     <h2>South Hartford Nature Trail</h2>
-    <p>Description of the Website</p>
   </div>
+  <div id="body-content">
+    <p>This website displays the green spaces in Hartford, Connecticut.
+      These green spaces are managed and maintained by xyz organizations.</p>
+    <p>Click on each green space to learn more about it!
+      Or use the search bar in the top right to look for your favorite spot. </p>
+    <br> <br>
+    <p>If you have any comments or suggestions, please add them here or email xyz@gmail.com</p>
+    </div>
 </div>
 <!-- Leaflet map here -->
-  <div id="mapid" style="width: auto; height: 100vh; margin: auto;">
+  <div id="mapid" style="width: auto; height: 670px;">
     <script src="javascript/map.js"></script>
   </div>
 
-</body>
+  <div id="copyright">
+      <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        document.writeln("Copyright &copy; " + year + " Chatfield and Heltzel");
+      </script>
+    </div>
 
-<footer>
-</footer>
+</body>
 
 </html>
