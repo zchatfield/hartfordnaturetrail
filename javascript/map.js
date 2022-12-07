@@ -3,13 +3,20 @@
 var map = L.map('mapid').setView([41.7658, -72.6734], 13);
 
 
-// Basemap
+// Basemap -  Open Street Map
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
       maxZoom: 20,
       id: 'mapbox/streets-v11',
       accessToken: mapbox_access_token,
   }).addTo(map);
 
+
+//BASEMAP Option 2: Topographic
+  //Still need to figure out how to make this appear or find a better basemap
+/* L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+}); */ 
 
 // Districts geojson added
   L.geoJson(districts, {
