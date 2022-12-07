@@ -1469,20 +1469,7 @@ var greenspaces = {
               [
                 -72.67296566650029,
                 41.749629835286356
-              ]
-            ]
-          ],
-          "type": "Polygon"
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "name":"Colt Park South"
-        },
-        "geometry": {
-          "coordinates": [
-            [
+              ],
               [
                 -72.67130478780551,
                 41.749567593226914
