@@ -15,7 +15,7 @@ var map = L.map('mapid').setView([41.7658, -72.6734], 13);
   L.geoJson(districts, {
           	style: function (feature) {
           		return {
-                color: 'black',
+                color: 'grey',
                 fillOpacity: '0',
                 weight: 1,
                 opacity: 1
@@ -80,7 +80,7 @@ var legend = L.control({ position: "bottomright" });
   legend.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += '<i style="background: green"></i><span>Green Spaces</span><br>';
-    div.innerHTML += '<i style="background: black"></i><span>Districts</span><br>';
+    div.innerHTML += '<i style="background: grey"></i><span>Neighborhood Boundaries</span><br>';
     div.innerHTML += '<i style="background: blue"></i><span>Bike Routes</span><br>';
     //div.innerHTML += '<i style="background: red"></i><span>Walking Paths</span><br>';
     return div;
