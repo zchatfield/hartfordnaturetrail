@@ -1,6 +1,6 @@
 
 // Map variable with center and zoom
-var map = L.map('mapid').setView([41.7658, -72.6734], 13);
+var map = L.map('mapid').setView([41.741989, -72.686727], 13);
 
 
 // Basemap -  Open Street Map
@@ -77,7 +77,7 @@ var green = L.geoJson(greenspaces, {
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
-      latlng: L.latLng([41.7658, -72.6734]),
+      latlng: L.latLng([41.741989, -72.686727]),
       zoom: 13,
   }).addTo(map);
 
