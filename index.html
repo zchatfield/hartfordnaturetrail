@@ -36,6 +36,8 @@
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>-->
 
   <!-- ***** esri basemap link (Keeping it all together here for easy removal if necessary)
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" crossorigin="" />
@@ -63,7 +65,8 @@
       The city of Hartford, Connecticut has a wealth of public green spaces.
       We invite you to explore the parks, community gardens, and natural hidden gems in the Southern part of Hartford.</p>
     <p>Click on each green space to learn more about it,
-      or use the search bar in the top right to look for your favorite spot. </p>
+      or use the search bar in the top left to look for your favorite spot.
+      Click anywhere on the map to set the start and end for a route between any location.</p>
     <p>This page is a collaborative project brought to you by Lauren Little Edutainment
     and Free Center. It was created by Zoe Chatfield and Emily Heltzel of Clark University.</p>
     <br>
@@ -71,10 +74,8 @@
       Do you have any favorite walking or biking routes you'd like to share?
     <br>Reach out to us here!</p>
     <form>
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname"> <br>
+      <label for="fname">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
       <label for="email">Email: </label><br>
       <input type="text" id="email" name="email"><br>
       <label for="comment">Comments:</label><br>

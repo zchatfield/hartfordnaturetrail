@@ -10,13 +10,13 @@ var map = L.map('mapid').setView([41.741989, -72.686727], 13);
       accessToken: mapbox_access_token,
   }).addTo(map);
 
- L.control
-   .layers(vectorTiles, null, {
-     collapsed: false
-   })
-   .addTo(map);
+ // L.control
+ //   .layers(vectorTiles, null, {
+ //     collapsed: false
+ //   })
+ //   .addTo(map);
 
- vectorTiles.Default.addTo(map);
+//vectorTiles.Default.addTo(map);
 //BASEMAP Option 2: Topographic
   //Still need to figure out how to make this appear or find a better basemap
 /* L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -97,7 +97,7 @@ var searchControl = new L.Control.Search({
 		layer: green,
 		propertyName: 'name',
 		marker: false,
-    position: "topright",
+    position: "topleft",
 		moveToLocation: function(latlng, title, map) {
   			map.setView(latlng, 16);
 		}
@@ -116,100 +116,53 @@ var searchControl = new L.Control.Search({
 
 
 /// Routing
-// function createButton(label, container) {
-//     var btn = L.DomUtil.create('button', '', container);
-//     btn.setAttribute('type', 'button');
-//     btn.innerHTML = label;
-//     return btn;
-// }
-//
-// map.on('click', function(e) {
-//     var container = L.DomUtil.create('div'),
-//         startBtn = createButton('Start from this location', container),
-//         destBtn = createButton('Go to this location', container);
-//
-//     L.popup()
-//         .setContent(container)
-//         .setLatLng(e.latlng)
-//         .openOn(map);
-// });
 
-// L.DomEvent.on(startBtn, 'click', function() {
-//         control.spliceWaypoints(0, 1, e.latlng);
-//         map.closePopup();
-//     });
-//
-// L.DomEvent.on(destBtn, 'click', function() {
-//        control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
-//        map.closePopup();
-//    });
 
-// var ReversablePlan = L.Routing.Plan.extend({
-//    createGeocoders: function() {
-//        var container = L.Routing.Plan.prototype.createGeocoders.call(this),
-//            reverseButton = createButton('↑↓', container);
-//        return container;
-//    }
-// });
-//
-// var plan = new ReversablePlan([
-//        L.latLng(57.74, 11.94),
-//        L.latLng(57.6792, 11.949)
-//    ], {
-//        geocoder: L.Control.Geocoder.nominatim(),
-//        routeWhileDragging: true
-//    }),
-//    control = L.Routing.control({
-//        routeWhileDragging: true,
-//        plan: plan
-//    }).addTo(map);
-
-// function button(label, container) {
-//                 var btn = L.DomUtil.create('button', '', container);
-//                 btn.setAttribute('type', 'button');
-//                 btn.innerHTML = label;
-//                 return btn;
-//             }
-//
-// var control = L.Routing.control({
-//     waypoints: [null],
-//     //         waypoints: [           L.latLng(44.91221, 7.671685),           L.latLng(44.907852, 7.673789)         ],
-//     routeWhileDragging: true,
-//     show: true,
-//     language: 'it',
-//     autoRoute: true
-// }).addTo(map);
-//
-// map.on('click', function (e) {
-//     var container = L.DomUtil.create('div'),
-//         startBtn = button('Start from this location', container),
-//         destBtn = button('Go to this location', container);
-//
-//     L.DomEvent.on(startBtn, 'click', function () {
-//         control.spliceWaypoints(0, 1, e.latlng);
-//         map.closePopup();
-//     });
-//
-//     L.DomEvent.on(destBtn, 'click', function () {
-//         control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
-//         map.closePopup();
-//     });
-//
-//     L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
-// });
-//
-// L.easyButton('<span class="fa fa-floppy-o"></span>', function () {
-//     alert('Save routing coordinates ...');
+// L.Routing.control({
+//   waypoints: [
+//     L.latLng(41.753988, -72.696626),
+//     L.latLng(41.752707, -72.666843)
+//   ],
+//   show: true
 // }).addTo(map);
 
 
-L.Routing.control({
-  waypoints: [
-    L.latLng(41.753988, -72.696626),
-    L.latLng(41.752707, -72.666843)
-  ],
-  show: true
+function button(label, container) {
+  var btn = L.DomUtil.create('button', '', container);
+  btn.setAttribute('type', 'button');
+  btn.innerHTML = label;
+  return btn;
+}
+
+var control = L.Routing.control({
+    waypoints: [null],
+    routeWhileDragging: true,
+    show: true,
+    autoRoute: true,
+    lineOptions: {
+      styles: [{color: 'blue', opacity: 1, weight: 5}]
+    }
 }).addTo(map);
+
+map.on('click', function (e) {
+    var container = L.DomUtil.create('div'),
+        startBtn = button('Start from this location', container),
+        destBtn = button('Go to this location', container);
+
+    L.DomEvent.on(startBtn, 'click', function () {
+        control.spliceWaypoints(0, 1, e.latlng);
+        map.closePopup();
+    });
+
+    L.DomEvent.on(destBtn, 'click', function () {
+        control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+        map.closePopup();
+    });
+
+    L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
+});
+
+
 
 
 //Esri basemap selector code ***
