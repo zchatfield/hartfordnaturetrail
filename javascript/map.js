@@ -48,18 +48,6 @@ var map = L.map('mapid').setView([41.741989, -72.686727], 13);
             },
           }).addTo(map);
 
-// Walking paths geojson added
-  // L.geoJson(paths, {
-  //           style: function (feature) {
-  //             return {
-  //               color: 'red',
-  //               fillOpacity: '0',
-  //               weight: 1,
-  //               opacity: 1
-  //             };
-  //           },
-  //         }).addTo(map);
-
 // Green spaces added from geojson, adding popup information
 var green = L.geoJson(greenspaces, {
         	style: function (feature) {
@@ -95,7 +83,6 @@ var legend = L.control({ position: "bottomright" });
     div.innerHTML += '<i style="background: green"></i><span>Green Spaces</span><br>';
     div.innerHTML += '<i style="background: grey"></i><span>Neighborhood Boundaries</span><br>';
     div.innerHTML += '<i style="background: red"></i><span>Bike Routes</span><br>';
-    //div.innerHTML += '<i style="background: red"></i><span>Walking Paths</span><br>';
     return div;
   };
 legend.addTo(map);
@@ -127,55 +114,103 @@ var searchControl = new L.Control.Search({
 
 	map.addControl(searchControl);
 
-  //Routing
-    //https://github.com/Turistforeningen/leaflet-routing
-  var routing = new L.Routing({
-  position: 'topright'
-  ,routing: {
-    router: myRouterFunction
-  }
-  ,tooltips: {
-    waypoint: 'Waypoint. Drag to move; Click to remove.',
-    segment: 'Drag to create a new waypoint'
-  }
-  ,styles: {     // see http://leafletjs.com/reference.html#polyline-options
-    trailer: {}  // drawing line
-    ,track: {}   // calculated route result
-    ,nodata: {}  // line when no result (error)
-  }
-  ,snapping: {
-    layers: [mySnappingLayer]
-    ,sensitivity: 15
-    ,vertexonly: false
-  }
-  ,shortcut: {
-    draw: {
-      enable: 68    // 'd'
-      ,disable: 81  // 'q'
-    }
-  }
-});
-map.addControl(routing);
-routing.draw(true);
-routing.routing(true);
-routing.snapping(true);
-routing.rerouteAllSegments(callback);
-var first = routing.getFirst();
-var last = routing.getLast();
-var waypointsArray = routing.getWaypoints();
-var polyline = routing.toPolyline();
-var geoJSON3D = routing.toGeoJSON();
-var geoJSON2D = routing.toGeoJSON(false);
-routing.loadGeoJSON(geojson, [options], function(err) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('Finished loading GeoJSON');
-  }
-});
-routing.on('routing:someEvent', function() {
-  console.log('routing:someEvent triggered');
-});
+
+/// Routing
+// function createButton(label, container) {
+//     var btn = L.DomUtil.create('button', '', container);
+//     btn.setAttribute('type', 'button');
+//     btn.innerHTML = label;
+//     return btn;
+// }
+//
+// map.on('click', function(e) {
+//     var container = L.DomUtil.create('div'),
+//         startBtn = createButton('Start from this location', container),
+//         destBtn = createButton('Go to this location', container);
+//
+//     L.popup()
+//         .setContent(container)
+//         .setLatLng(e.latlng)
+//         .openOn(map);
+// });
+
+// L.DomEvent.on(startBtn, 'click', function() {
+//         control.spliceWaypoints(0, 1, e.latlng);
+//         map.closePopup();
+//     });
+//
+// L.DomEvent.on(destBtn, 'click', function() {
+//        control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+//        map.closePopup();
+//    });
+
+// var ReversablePlan = L.Routing.Plan.extend({
+//    createGeocoders: function() {
+//        var container = L.Routing.Plan.prototype.createGeocoders.call(this),
+//            reverseButton = createButton('↑↓', container);
+//        return container;
+//    }
+// });
+//
+// var plan = new ReversablePlan([
+//        L.latLng(57.74, 11.94),
+//        L.latLng(57.6792, 11.949)
+//    ], {
+//        geocoder: L.Control.Geocoder.nominatim(),
+//        routeWhileDragging: true
+//    }),
+//    control = L.Routing.control({
+//        routeWhileDragging: true,
+//        plan: plan
+//    }).addTo(map);
+
+// function button(label, container) {
+//                 var btn = L.DomUtil.create('button', '', container);
+//                 btn.setAttribute('type', 'button');
+//                 btn.innerHTML = label;
+//                 return btn;
+//             }
+//
+// var control = L.Routing.control({
+//     waypoints: [null],
+//     //         waypoints: [           L.latLng(44.91221, 7.671685),           L.latLng(44.907852, 7.673789)         ],
+//     routeWhileDragging: true,
+//     show: true,
+//     language: 'it',
+//     autoRoute: true
+// }).addTo(map);
+//
+// map.on('click', function (e) {
+//     var container = L.DomUtil.create('div'),
+//         startBtn = button('Start from this location', container),
+//         destBtn = button('Go to this location', container);
+//
+//     L.DomEvent.on(startBtn, 'click', function () {
+//         control.spliceWaypoints(0, 1, e.latlng);
+//         map.closePopup();
+//     });
+//
+//     L.DomEvent.on(destBtn, 'click', function () {
+//         control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+//         map.closePopup();
+//     });
+//
+//     L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
+// });
+//
+// L.easyButton('<span class="fa fa-floppy-o"></span>', function () {
+//     alert('Save routing coordinates ...');
+// }).addTo(map);
+
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(41.753988, -72.696626),
+    L.latLng(41.752707, -72.666843)
+  ],
+  show: true
+}).addTo(map);
+
 
 //Esri basemap selector code ***
 /*
