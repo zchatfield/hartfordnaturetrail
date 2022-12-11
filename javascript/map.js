@@ -120,3 +120,53 @@ var searchControl = new L.Control.Search({
 	});
 
 	map.addControl(searchControl);
+
+  //Routing
+    //https://github.com/Turistforeningen/leaflet-routing 
+  var routing = new L.Routing({
+  position: 'topright'
+  ,routing: {
+    router: myRouterFunction
+  }
+  ,tooltips: {
+    waypoint: 'Waypoint. Drag to move; Click to remove.',
+    segment: 'Drag to create a new waypoint'
+  }
+  ,styles: {     // see http://leafletjs.com/reference.html#polyline-options
+    trailer: {}  // drawing line
+    ,track: {}   // calculated route result
+    ,nodata: {}  // line when no result (error)
+  }
+  ,snapping: {
+    layers: [mySnappingLayer]
+    ,sensitivity: 15
+    ,vertexonly: false
+  }
+  ,shortcut: {
+    draw: {
+      enable: 68    // 'd'
+      ,disable: 81  // 'q'
+    }
+  }
+});
+map.addControl(routing);
+routing.draw(true);
+routing.routing(true);
+routing.snapping(true);
+routing.rerouteAllSegments(callback);
+var first = routing.getFirst();
+var last = routing.getLast();
+var waypointsArray = routing.getWaypoints();
+var polyline = routing.toPolyline();
+var geoJSON3D = routing.toGeoJSON();
+var geoJSON2D = routing.toGeoJSON(false);
+routing.loadGeoJSON(geojson, [options], function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Finished loading GeoJSON');
+  }
+});
+routing.on('routing:someEvent', function() {
+  console.log('routing:someEvent triggered');
+});
