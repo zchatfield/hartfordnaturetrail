@@ -117,53 +117,75 @@ var searchControl = new L.Control.Search({
 
 /// Routing
 
-
-// L.Routing.control({
-//   waypoints: [
-//     L.latLng(41.753988, -72.696626),
-//     L.latLng(41.752707, -72.666843)
-//   ],
-//   show: true
-// }).addTo(map);
-
-
-function button(label, container) {
-  var btn = L.DomUtil.create('button', '', container);
-  btn.setAttribute('type', 'button');
-  btn.innerHTML = label;
-  return btn;
-}
-
-var control = L.Routing.control({
-    waypoints: [null],
-    routeWhileDragging: true,
-    show: true,
-    autoRoute: true,
-    lineOptions: {
-      styles: [{color: 'blue', opacity: 1, weight: 5}]
+var routeOn = L.easyButton({
+  states: [{
+    stateName: 'route',
+    icon: 'fa-map-marker',
+    title: 'add a route option',
+    onClick: function(btn, map) {
+      map.setView([41.740932, -72.659676], 13);
+      btn.state('no-route');
     }
+  }, {
+    stateName: 'no-route',
+    icon: 'fa-map-marker',
+    title: 'remove route option',
+    onClick: function(btn, map) {
+        map.setView([41.740932, -72.686727], 13);
+        btn.state('route');
+    }
+  }]
+});
+routeOn.addTo(map);
+
+
+
+L.easyButton( 'fa-map-marker', function(){
+
+  function button(label, container) {
+    var btn = L.DomUtil.create('button', '', container);
+    btn.setAttribute('type', 'button');
+    btn.innerHTML = label;
+    return btn;
+  }
+
+  var control = L.Routing.control({
+      waypoints: [null],
+      routeWhileDragging: true,
+      show: true,
+      autoRoute: true,
+      lineOptions: {
+        styles: [{color: 'blue', opacity: 1, weight: 5}]
+      }
+  }).addTo(map);
+
+  map.on('click', function (e) {
+      var container = L.DomUtil.create('div'),
+          startBtn = button('Start from this location', container),
+          destBtn = button('Go to this location', container);
+
+      L.DomEvent.on(startBtn, 'click', function () {
+          control.spliceWaypoints(0, 1, e.latlng);
+          map.closePopup();
+      });
+
+      L.DomEvent.on(destBtn, 'click', function () {
+          control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
+          map.closePopup();
+      });
+
+      L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
+  });
+
+  map.flyTo([41.740932, -72.659676], 13)
 }).addTo(map);
 
-map.on('click', function (e) {
-    var container = L.DomUtil.create('div'),
-        startBtn = button('Start from this location', container),
-        destBtn = button('Go to this location', container);
-
-    L.DomEvent.on(startBtn, 'click', function () {
-        control.spliceWaypoints(0, 1, e.latlng);
-        map.closePopup();
-    });
-
-    L.DomEvent.on(destBtn, 'click', function () {
-        control.spliceWaypoints(control.getWaypoints().length - 1, 1, e.latlng);
-        map.closePopup();
-    });
-
-    L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
-});
 
 
-
+// waypoints: [
+//   L.latLng(41.753988, -72.696626),
+//   L.latLng(41.752707, -72.666843)
+// ],
 
 //Esri basemap selector code ***
 /*
