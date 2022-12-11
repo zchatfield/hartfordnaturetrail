@@ -15,7 +15,7 @@
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
      crossorigin=""/>
 
-<!--Leaflet js file-->
+<!--Leaflet js file -->
    <script
      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
@@ -35,6 +35,12 @@
   <link rel="stylesheet" href="https://opengeo.tech/maps/leaflet-search/src/leaflet-search.css">
   <script src="https://opengeo.tech/maps/leaflet-search/src/leaflet-search.js" type="text/javascript"></script>
 
+  <!-- ***** esri basemap link (Keeping it all together here for easy removal if necessary)
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" crossorigin="" />
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" crossorigin=""></script>
+ <script src="https://unpkg.com/esri-leaflet@^3.0.8/dist/esri-leaflet.js"></script>
+ <script src="https://unpkg.com/esri-leaflet-vector@4.0.0/dist/esri-leaflet-vector.js" crossorigin=""></script>
+ -->
  <!--Main style sheet-->
   <link rel="stylesheet" type="text/css" href="css/main_style.css">
 
@@ -75,9 +81,10 @@
     </form>
   </div>
   <!-- Leaflet map here -->
-    <div id="mapid">
+  <div id="mapid">
       <script src="javascript/map.js"></script>
-    </div>
+  </div>
+  <!--window for more information, maybe we can get it to populate based on map click --> 
   <div id="learn-more">
     <h3>Information about Hartford nature will go here<h3>
   </div>

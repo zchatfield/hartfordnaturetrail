@@ -5,7 +5,7 @@ var greenspaces = {
       "type": "Feature",
       "properties": {
         "name": "Pope Park",
-        "popupContent": "This is Pope Park!"
+        "popupContent": "This is Pope Park! <a href='zchatfield.github.io/hartfordnaturetrail/hartfordnaturetrail/pages/popepark.html'>Click<a>"
       },
       "geometry": {
         "coordinates": [
