@@ -10,16 +10,6 @@ var map = L.map('mapid').setView([41.741989, -72.686727], 13);
       accessToken: mapbox_access_token,
   }).addTo(map);
 
- // the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
- /*vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
-   apiKey
- });
- allEnums.forEach((enumString) => {
-   vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
-     apiKey
-   });
- });
-
  L.control
    .layers(vectorTiles, null, {
      collapsed: false
@@ -189,6 +179,15 @@ routing.on('routing:someEvent', function() {
 
 //Esri basemap selector code ***
 /*
+// the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
+/*vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
+  apiKey
+});
+allEnums.forEach((enumString) => {
+  vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
+    apiKey
+  });
+});
  const vectorTiles = {};
  const allEnums = [
    "ArcGIS:Imagery",
