@@ -41,7 +41,7 @@ label {
 
 #header {
   height: 70px;
-  width: 400px;
+  width: 1220px;
   background-color: #008000;
   box-shadow: 0px 5px 8px grey;
   text-align: center;
@@ -62,10 +62,20 @@ label {
   z-index: 1;
 }
 
+#learn-more{
+height:200px;
+width:1250px;
+background-color:;
+margin-top:20px;
+text-align: justify;
+}
+
 #mapid{
   width: 800px;
   height: 550px;
   margin-top: 5px;
+  position:relative;
+  padding:inherit;
 }
 
 #copyright{
