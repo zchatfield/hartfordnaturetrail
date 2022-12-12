@@ -247,7 +247,18 @@ apiKey       });
      vectorTiles.Default.addTo(map);
 
 //PRINT
+src="leaflet-easyPrint-gh-pages/src/index.js"
 
+L.easyPrint({
+	title: 'My awesome print button',
+	position: 'bottomright',
+	sizeModes: ['A4Portrait', 'A4Landscape']
+}).addTo(map);
 
+var printPlugin = L.easyPrint({
+	hidden: true,
+	sizeModes: ['A4Portrait']
+}).addTo(map);
+printPlugin.printMap('A4Portrait', 'MyFileName');
 
 //ZOOM SLIDER FULL CODE PLUG IN
