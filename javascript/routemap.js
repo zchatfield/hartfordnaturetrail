@@ -113,7 +113,7 @@ var routeOn = L.easyButton({
       btn.state('no-route');
     }
   }, {
-    stateName: 'no-route',
+  stateName: 'no-route',
     icon: 'fa-map-marker',
     title: 'remove route option',
     onClick: function(btn, map) {
@@ -122,8 +122,7 @@ var routeOn = L.easyButton({
     }
   }]
 });
-routeOn.addTo(map);
-
+/*routeOn.addTo(map); */
 
 
 L.easyButton( 'fa-map-marker', function(){
@@ -163,7 +162,7 @@ L.easyButton( 'fa-map-marker', function(){
       L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
   });
 
-  map.flyTo([41.740932, -72.659676], 13)
+  map.flyTo([41.74403206040221, -72.68307359815084], 15)
 }).addTo(map);
 
 /*
