@@ -161,8 +161,8 @@ L.easyButton( 'fa-map-marker', function(){
 
   map.on('click', function (e) {
       var container = L.DomUtil.create('div'),
-          startBtn = button('Start from this location', container),
-          destBtn = button('Go to this location', container);
+          startBtn = button('Start here', container),
+          destBtn = button('End here', container);
 
       L.DomEvent.on(startBtn, 'click', function () {
           control.spliceWaypoints(0, 1, e.latlng);
@@ -180,7 +180,20 @@ L.easyButton( 'fa-map-marker', function(){
   map.flyTo([41.740932, -72.659676], 13)
 }).addTo(map);
 
+/*
+$scope.routingControl =  L.Routing.control({
+    waypoints: [
+        L.latLng(fromLat, fromLng),
+        L.latLng(toLat, toLng)
+    ]
+  }).addTo(map);
 
+  $scope.removeRouting = function() {
+      leafletData.getMap().then(function(map) {
+          map.removeControl($scope.routingControl);
+      });
+  };
+*/
 
 // waypoints: [
 //   L.latLng(41.753988, -72.696626),
@@ -197,7 +210,7 @@ allEnums.forEach((enumString) => {
   vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
     apiKey
   });
-});
+});  */
  const vectorTiles = {};
  const allEnums = [
    "ArcGIS:Imagery",
@@ -247,4 +260,19 @@ allEnums.forEach((enumString) => {
    "ArcGIS:Hillshade:Light",
    "ArcGIS:Hillshade:Dark"
  ];
- */
+
+ /* vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
+       apiKey
+     });
+     allEnums.forEach((enumString) => {
+       vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
+apiKey       });
+     }); */
+
+     L.control
+       .layers(vectorTiles, null, {
+         collapsed: false
+       })
+       .addTo(map);
+
+     vectorTiles.Default.addTo(map);
