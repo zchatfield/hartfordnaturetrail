@@ -71,8 +71,8 @@ var green = L.geoJson(greenspaces, {
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
-      latlng: L.latLng([41.741989, -72.686727]),
-      zoom: 13,
+      latlng: L.latLng([41.74403206040221, -72.68307359815084]),
+      zoom: 14,
   }).addTo(map);
 
 
