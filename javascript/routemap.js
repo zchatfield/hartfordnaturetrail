@@ -148,6 +148,7 @@ L.easyButton( 'fa-map-marker', function(){
   var control = L.Routing.control({
       waypoints: [null],
       routeWhileDragging: true,
+      geocoder: L.Control.Geocoder.nominatim(),
       show: true,
       autoRoute: true,
       lineOptions: {
