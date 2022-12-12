@@ -22,7 +22,7 @@
      crossorigin="">
    </script>
 
-   <!-- ***** esri basemap link (Keeping it all together here for easy removal if necessary)--> 
+   <!-- ***** esri basemap link (Keeping it all together here for easy removal if necessary)-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" crossorigin=""></script>
   <script src="https://unpkg.com/esri-leaflet@^3.0.8/dist/esri-leaflet.js"></script>
@@ -97,6 +97,17 @@
   <!--window for more information, maybe we can get it to populate based on map click -->
   <div id="learn-more">
     <h3>Information about Hartford nature will go here<h3>
+
+      <button class="accordion">Section 1</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion">Section 2</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
   </div>
 
     <div id="copyright">
@@ -106,6 +117,23 @@
           document.writeln("Copyright &copy; " + year + " Chatfield and Heltzel");
         </script>
     </div>
+    <!-- Accordion table script-->
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
 </div>
 
 
