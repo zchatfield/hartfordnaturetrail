@@ -1,6 +1,6 @@
 
 // Map variable with center and zoom
-var map = L.map('mapid').setView([41.741989, -72.686727], 13);
+var map = L.map('mapid').setView([41.74403206040221, -72.68307359815084], 14);
 
 
 // Basemap -  Open Street Map
