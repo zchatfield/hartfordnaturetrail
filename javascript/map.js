@@ -1,28 +1,87 @@
 
 // Map variable with center and zoom
+// var map = L.map('mapid').setView([41.74403206040221, -72.68307359815084], 14);
+//
+//
+// // Basemap -  Open Street Map
+//   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
+//       maxZoom: 20,
+//       id: 'mapbox/streets-v11',
+//       accessToken: mapbox_access_token,
+//   }).addTo(map);
+
+const apiKey = arc_apikey;
+
 var map = L.map('mapid').setView([41.74403206040221, -72.68307359815084], 14);
 
+      const vectorTiles = {};
+      const allEnums = [
+        "ArcGIS:Imagery",
+        "ArcGIS:Imagery:Standard",
+        "ArcGIS:Imagery:Labels",
+        "ArcGIS:LightGray",
+        "ArcGIS:LightGray:Base",
+        "ArcGIS:LightGray:Labels",
+        "ArcGIS:DarkGray",
+        "ArcGIS:DarkGray:Base",
+        "ArcGIS:DarkGray:Labels",
+        "ArcGIS:Navigation",
+        "ArcGIS:NavigationNight",
+        "ArcGIS:Streets",
+        "ArcGIS:StreetsNight",
+        "ArcGIS:StreetsRelief",
+        "ArcGIS:StreetsRelief:Base",
+        "ArcGIS:Topographic",
+        "ArcGIS:Topographic:Base",
+        "ArcGIS:Oceans",
+        "ArcGIS:Oceans:Base",
+        "ArcGIS:Oceans:Labels",
+        "OSM:Standard",
+        "OSM:StandardRelief",
+        "OSM:StandardRelief:Base",
+        "OSM:Streets",
+        "OSM:StreetsRelief",
+        "OSM:StreetsRelief:Base",
+        "OSM:LightGray",
+        "OSM:LightGray:Base",
+        "OSM:LightGray:Labels",
+        "OSM:DarkGray",
+        "OSM-DarkGray:Base",
+        "OSM-DarkGray:Labels",
+        "ArcGIS:Terrain",
+        "ArcGIS:Terrain:Base",
+        "ArcGIS:Terrain:Detail",
+        "ArcGIS:Community",
+        "ArcGIS:ChartedTerritory",
+        "ArcGIS:ChartedTerritory:Base",
+        "ArcGIS:ColoredPencil",
+        "ArcGIS:Nova",
+        "ArcGIS:ModernAntique",
+        "ArcGIS:ModernAntique:Base",
+        "ArcGIS:Midcentury",
+        "ArcGIS:Newspaper",
+        "ArcGIS:Hillshade:Light",
+        "ArcGIS:Hillshade:Dark"
+      ];
 
-// Basemap -  Open Street Map
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
-      maxZoom: 20,
-      id: 'mapbox/streets-v11',
-      accessToken: mapbox_access_token,
-  }).addTo(map);
+      // the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
+      vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
+        apiKey
+      });
+      allEnums.forEach((enumString) => {
+        vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
+          apiKey
+        });
+      });
 
- // L.control
- //   .layers(vectorTiles, null, {
- //     collapsed: false
- //   })
- //   .addTo(map);
+      L.control
+        .layers(vectorTiles, null, {
+          collapsed: false
+        })
+        .addTo(map);
 
-//vectorTiles.Default.addTo(map);
-//BASEMAP Option 2: Topographic
-  //Still need to figure out how to make this appear or find a better basemap
-/* L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	maxZoom: 17,
-	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-}); */
+      vectorTiles.Default.addTo(map);
+
 
 // Districts geojson added
   L.geoJson(districts, {
@@ -113,81 +172,3 @@ var searchControl = new L.Control.Search({
 	});
 
 	map.addControl(searchControl);
-
-
-//Esri basemap selector code ***
-/*
-// the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
-/*vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
-  apiKey
-});
-allEnums.forEach((enumString) => {
-  vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
-    apiKey
-  });
-});  */
- const vectorTiles = {};
- const allEnums = [
-   "ArcGIS:Imagery",
-   "ArcGIS:Imagery:Standard",
-   "ArcGIS:Imagery:Labels",
-   "ArcGIS:LightGray",
-   "ArcGIS:LightGray:Base",
-   "ArcGIS:LightGray:Labels",
-   "ArcGIS:DarkGray",
-   "ArcGIS:DarkGray:Base",
-   "ArcGIS:DarkGray:Labels",
-   "ArcGIS:Navigation",
-   "ArcGIS:NavigationNight",
-   "ArcGIS:Streets",
-   "ArcGIS:StreetsNight",
-   "ArcGIS:StreetsRelief",
-   "ArcGIS:StreetsRelief:Base",
-   "ArcGIS:Topographic",
-   "ArcGIS:Topographic:Base",
-   "ArcGIS:Oceans",
-   "ArcGIS:Oceans:Base",
-   "ArcGIS:Oceans:Labels",
-   "OSM:Standard",
-   "OSM:StandardRelief",
-   "OSM:StandardRelief:Base",
-   "OSM:Streets",
-   "OSM:StreetsRelief",
-   "OSM:StreetsRelief:Base",
-   "OSM:LightGray",
-   "OSM:LightGray:Base",
-   "OSM:LightGray:Labels",
-   "OSM:DarkGray",
-   "OSM-DarkGray:Base",
-   "OSM-DarkGray:Labels",
-   "ArcGIS:Terrain",
-   "ArcGIS:Terrain:Base",
-   "ArcGIS:Terrain:Detail",
-   "ArcGIS:Community",
-   "ArcGIS:ChartedTerritory",
-   "ArcGIS:ChartedTerritory:Base",
-   "ArcGIS:ColoredPencil",
-   "ArcGIS:Nova",
-   "ArcGIS:ModernAntique",
-   "ArcGIS:ModernAntique:Base",
-   "ArcGIS:Midcentury",
-   "ArcGIS:Newspaper",
-   "ArcGIS:Hillshade:Light",
-   "ArcGIS:Hillshade:Dark"
- ];
-
- /* vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
-       apiKey
-     });
-     allEnums.forEach((enumString) => {
-       vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
-apiKey       });
-     }); */
-
-     L.control
-       .layers(vectorTiles, null, {
-         collapsed: false
-       })
-       .addTo(map);
-
-     vectorTiles.Default.addTo(map);
