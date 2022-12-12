@@ -1,6 +1,6 @@
 
 // Map variable with center and zoom
-var map = L.map('mapid').setView([41.741989, -72.686727], 13);
+var map = L.map('maprouting').setView([41.74403206040221, -72.68307359815084], 14);
 
 
 // Basemap -  Open Street Map
@@ -9,20 +9,6 @@ var map = L.map('mapid').setView([41.741989, -72.686727], 13);
       id: 'mapbox/streets-v11',
       accessToken: mapbox_access_token,
   }).addTo(map);
-
- // L.control
- //   .layers(vectorTiles, null, {
- //     collapsed: false
- //   })
- //   .addTo(map);
-
-//vectorTiles.Default.addTo(map);
-//BASEMAP Option 2: Topographic
-  //Still need to figure out how to make this appear or find a better basemap
-/* L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	maxZoom: 17,
-	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-}); */
 
 // Districts geojson added
   L.geoJson(districts, {
@@ -123,7 +109,7 @@ var routeOn = L.easyButton({
     icon: 'fa-map-marker',
     title: 'add a route option',
     onClick: function(btn, map) {
-      map.setView([41.740932, -72.659676], 13);
+      map.setView([41.74403206040221, -72.68307359815084], 15);
       btn.state('no-route');
     }
   }, {
@@ -131,7 +117,7 @@ var routeOn = L.easyButton({
     icon: 'fa-map-marker',
     title: 'remove route option',
     onClick: function(btn, map) {
-        map.setView([41.740932, -72.686727], 13);
+        map.setView([41.74403206040221, -72.68307359815084], 15);
         btn.state('route');
     }
   }]

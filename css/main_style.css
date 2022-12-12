@@ -65,7 +65,7 @@ label {
 #learn-more{
 height:200px;
 width:1250px;
-background-color:;
+background-color: #d6eecd;
 margin-top:20px;
 text-align: justify;
 }
@@ -75,6 +75,14 @@ text-align: justify;
   height: 550px;
   margin-top: 5px;
   position:relative;
+  padding:inherit;
+}
+
+#maprouting{
+  width: 1220px;
+  height: 550px;
+  margin-top: 5px;
+  position:inherit;
   padding:inherit;
 }
 
@@ -88,7 +96,7 @@ text-align: justify;
       }
     #basemaps {
         margin-bottom: 5px;
-      } */ 
+      } */
 
 #copyright{
   text-align: center;
