@@ -166,3 +166,8 @@ padding:10px;
   background-color: white;
   overflow: hidden;
 }
+
+/* PRINTING */
+.easyPrintHolder .a3CssClass {
+  background-image: url(data:image/svg+xml;utf8;base64,PD9...go=);
+}

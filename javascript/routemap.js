@@ -57,8 +57,8 @@ var green = L.geoJson(greenspaces, {
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
-      latlng: L.latLng([41.741989, -72.686727]),
-      zoom: 13,
+      latlng: L.latLng([41.74403206040221, -72.68307359815084]),
+      zoom: 14,
   }).addTo(map);
 
 
@@ -76,6 +76,8 @@ legend.addTo(map);
 
 // Scale bar
 L.control.scale().addTo(map);
+
+//Zoom slider
 
 
 // Search Bar
@@ -165,37 +167,8 @@ L.easyButton( 'fa-map-marker', function(){
   map.flyTo([41.74403206040221, -72.68307359815084], 15)
 }).addTo(map);
 
-/*
-$scope.routingControl =  L.Routing.control({
-    waypoints: [
-        L.latLng(fromLat, fromLng),
-        L.latLng(toLat, toLng)
-    ]
-  }).addTo(map);
+//SELECT BASEMAPS
 
-  $scope.removeRouting = function() {
-      leafletData.getMap().then(function(map) {
-          map.removeControl($scope.routingControl);
-      });
-  };
-*/
-
-// waypoints: [
-//   L.latLng(41.753988, -72.696626),
-//   L.latLng(41.752707, -72.666843)
-// ],
-
-//Esri basemap selector code ***
-/*
-// the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
-/*vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
-  apiKey
-});
-allEnums.forEach((enumString) => {
-  vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
-    apiKey
-  });
-});  */
  const vectorTiles = {};
  const allEnums = [
    "ArcGIS:Imagery",
@@ -246,13 +219,13 @@ allEnums.forEach((enumString) => {
    "ArcGIS:Hillshade:Dark"
  ];
 
- /* vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
+ vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
        apiKey
      });
      allEnums.forEach((enumString) => {
        vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
 apiKey       });
-     }); */
+     });
 
      L.control
        .layers(vectorTiles, null, {
@@ -261,3 +234,40 @@ apiKey       });
        .addTo(map);
 
      vectorTiles.Default.addTo(map);
+
+//PRINT
+
+L.easyPrint({
+  title: 'Print',
+	position: 'topleft',
+	sizeModes: ['A4Portrait', 'A4Landscape']
+}).addTo(map);
+
+
+		var popup = L.popup();
+
+
+		var printer = L.easyPrint({
+      		tileLayer: tiles,
+      		sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
+      		filename: 'myMap',
+      		exportOnly: true,
+      		hideControlContainer: true
+		}).addTo(map);
+
+		function manualPrint () {
+			printer.printMap('CurrentSize', 'MyManualPrint')
+		}
+/*
+var printPlugin = L.easyPrint({
+	hidden: false,
+	sizeModes: ['A4Portrait']
+}).addTo(map);
+printPlugin.printMap('A4Portrait', 'MyFileName');
+
+var a3Size = {
+	width: 2339,
+	height: 3308,
+	className: 'a3CssClass',
+	tooltip: 'A custom A3 size'
+} */
