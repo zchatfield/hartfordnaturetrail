@@ -38,6 +38,9 @@ label {
   width: 100vh;
 }*/
 
+body {
+  background-color: #d6eecd ;
+}
 
 #header {
   height: 70px;
