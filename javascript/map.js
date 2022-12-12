@@ -177,7 +177,7 @@ L.easyButton( 'fa-map-marker', function(){
       L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
   });
 
-  map.flyTo([41.740932, -72.659676], 13)
+  map.flyTo([41.74403206040221, -72.68307359815084], 14)
 }).addTo(map);
 
 /*

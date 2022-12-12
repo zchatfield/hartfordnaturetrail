@@ -52,6 +52,17 @@ var green = L.geoJson(greenspaces, {
     map.setView(e.latlng, 16);
   })
 
+// Recommended trailroutes
+/* var trails = L.geoJson(routes,{
+  style: function (feature){
+    return{
+      color: 'dark green',
+      weight:1,
+      opacity:1
+    };
+  },
+}).addTo(map); */
+
 
 // Reset View plug in
   L.control.resetView({
