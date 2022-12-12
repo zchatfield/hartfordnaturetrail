@@ -246,13 +246,12 @@ apiKey       });
      vectorTiles.Default.addTo(map);
 
 //PRINT
-
+/*
 L.easyPrint({
   title: 'Print',
-	position: 'topleft',
-	sizeModes: ['A4Portrait', 'A4Landscape']
+  position: 'topleft',
+  sizeModes: ['A4Portrait', 'A4Landscape']
 }).addTo(map);
-
 
 		var popup = L.popup();
 
@@ -265,16 +264,18 @@ L.easyPrint({
       		hideControlContainer: true
 		}).addTo(map);
 
+*/
 		function manualPrint () {
 			printer.printMap('CurrentSize', 'MyManualPrint')
 		}
-/*
+
 var printPlugin = L.easyPrint({
 	hidden: false,
-	sizeModes: ['A4Portrait']
+	sizeModes: ['A4Portrait', 'A4Landscape']
 }).addTo(map);
-printPlugin.printMap('A4Portrait', 'MyFileName');
+/*printPlugin.printMap('A4Portrait', 'MyFileName');
 
+/*
 var a3Size = {
 	width: 2339,
 	height: 3308,
@@ -282,6 +283,7 @@ var a3Size = {
 	tooltip: 'A custom A3 size'
 }
 
+/*
 //ZOOM SLIDER FULL CODE PLUG IN
   L.Control.Zoomslider = (function () {
 
@@ -488,6 +490,7 @@ var a3Size = {
   L.control.zoomslider = function (options) {
   	return new L.Control.Zoomslider(options);
   };
-*/
+
 var ZoomSlider = L.Control.Zoomslider()
 (new ZoomSlider).addTo(map);
+*/

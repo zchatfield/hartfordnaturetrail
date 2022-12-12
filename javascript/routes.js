@@ -130,6 +130,6 @@ var trailroutes = {
         "type": "LineString"
       }
     },
-  
+
   ]
 }
