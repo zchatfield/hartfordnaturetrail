@@ -5,7 +5,7 @@ var greenspaces = {
       "type": "Feature",
       "properties": {
         "name": "Pope Park",
-        "popupContent": "This is Pope Park! <a href='zchatfield.github.io/hartfordnaturetrail/hartfordnaturetrail/pages/popepark.html'>Click<a>"
+        "popupContent": "Pope Park <a href='zchatfield.github.io/hartfordnaturetrail/hartfordnaturetrail/pages/popepark.html'>Click<a>"
       },
       "geometry": {
         "coordinates": [
@@ -379,7 +379,7 @@ var greenspaces = {
       "type": "Feature",
           "properties": {
             "name":"Free Center",
-            "popupContent":"This is the Free Center edible landscape and community garden!"},
+            "popupContent":"Free Center edible landscape and community garden"},
           "geometry": {
             "coordinates": [
               [
@@ -436,7 +436,7 @@ var greenspaces = {
           "type": "Feature",
           "properties": {
           "name": "Summer of Solutions",
-          "popupContent": "This is the Summer of Solutions community garden!"},
+          "popupContent": "Summer of Solutions community garden"},
           "geometry": {
             "coordinates": [
               [
@@ -469,7 +469,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Trinity College",
-         "popupContent":"This is the Trinity College Community Garden!"},
+         "popupContent":"Trinity College community garden"},
          "geometry": {
            "coordinates": [
              [
@@ -502,7 +502,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Cedar Hill Cemetary",
-         "popupContent":"This is the Cedar Hill Cemetary!"},
+         "popupContent":"Cedar Hill Cemetary"},
          "geometry": {
            "coordinates": [
              [
@@ -923,7 +923,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Zion Hill Cemetary",
-         "popupContent":"This is the Zion Hill Cemetary!"},
+         "popupContent":"Zion Hill Cemetary"},
          "geometry": {
            "coordinates": [
              [
@@ -1024,7 +1024,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Goodwin Park",
-        "popupContent":"This is Goodwin Park!"},
+        "popupContent":"Goodwin Park"},
         "geometry": {
           "coordinates": [
             [
@@ -1153,7 +1153,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rocky Ridge Park",
-        "popupContent":"This is Rocky Ridge Park!"},
+        "popupContent":"Rocky Ridge Park"},
         "geometry": {
           "coordinates": [
             [
@@ -1346,7 +1346,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Colt Park",
-        "popupContent":"This is Colt Park!"},
+        "popupContent":"Colt Park"},
         "geometry": {
           "coordinates": [
             [
@@ -1599,7 +1599,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
           "name": "Porter Memorial Park",
-          "popupContent": "This is Porter Memorial Park!"
+          "popupContent": "Porter Memorial Park"
         },
         "geometry": {
           "coordinates": [
@@ -1641,7 +1641,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Barnard Park",
-        "popupContent":"This is Barnard Park!"},
+        "popupContent":"Barnard Park"},
         "geometry": {
           "coordinates": [
             [
@@ -1710,7 +1710,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Charter Oak Landing",
-        "popupContent":"This is Charter Oak Landing!"},
+        "popupContent":"Charter Oak Landing"},
         "geometry": {
           "coordinates": [
             [
@@ -1835,7 +1835,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Hyland Memorial Park",
-        "popupContent":"This is Hyland Memorial Park!"},
+        "popupContent":"Hyland Memorial Park"},
         "geometry": {
           "coordinates": [
             [
@@ -1912,7 +1912,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rice Heights Park",
-        "popupContent":"This is Rice Heights Park!"},
+        "popupContent":"Rice Heights Park"},
         "geometry": {
           "coordinates": [
             [
@@ -2165,7 +2165,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Brookfield Wetlands",
-        "popupContent":"These are the Brookfield Wetlands!"},
+        "popupContent":"Brookfield Wetlands"},
         "geometry": {
           "coordinates": [
             [
