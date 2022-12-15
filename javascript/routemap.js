@@ -4,11 +4,21 @@ var map = L.map('maprouting').setView([41.74403206040221, -72.68307359815084], 1
 
 
 // Basemap -  Open Street Map
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
-      maxZoom: 20,
-      id: 'mapbox/streets-v11',
-      accessToken: mapbox_access_token,
+  // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
+  //     maxZoom: 20,
+  //     id: 'mapbox/streets-v11',
+  //     accessToken: mapbox_access_token,
+  // }).addTo(map);
+
+// Esri Basemap
+  const apiKey = arc_apikey;
+
+  const basemapEnum = "ArcGIS:Navigation";
+
+  L.esri.Vector.vectorBasemapLayer(basemapEnum, {
+    apiKey: apiKey
   }).addTo(map);
+
 
 // Districts geojson added
   L.geoJson(districts, {
@@ -177,74 +187,6 @@ L.easyButton( 'fa-map-marker', function(){
   map.flyTo([41.743988, -72.673088], 14)
 }).addTo(map);
 
-
-//SELECT BASEMAPS
-
- const vectorTiles = {};
- const allEnums = [
-   "ArcGIS:Imagery",
-   "ArcGIS:Imagery:Standard",
-   "ArcGIS:Imagery:Labels",
-   "ArcGIS:LightGray",
-   "ArcGIS:LightGray:Base",
-   "ArcGIS:LightGray:Labels",
-   "ArcGIS:DarkGray",
-   "ArcGIS:DarkGray:Base",
-   "ArcGIS:DarkGray:Labels",
-   "ArcGIS:Navigation",
-   "ArcGIS:NavigationNight",
-   "ArcGIS:Streets",
-   "ArcGIS:StreetsNight",
-   "ArcGIS:StreetsRelief",
-   "ArcGIS:StreetsRelief:Base",
-   "ArcGIS:Topographic",
-   "ArcGIS:Topographic:Base",
-   "ArcGIS:Oceans",
-   "ArcGIS:Oceans:Base",
-   "ArcGIS:Oceans:Labels",
-   "OSM:Standard",
-   "OSM:StandardRelief",
-   "OSM:StandardRelief:Base",
-   "OSM:Streets",
-   "OSM:StreetsRelief",
-   "OSM:StreetsRelief:Base",
-   "OSM:LightGray",
-   "OSM:LightGray:Base",
-   "OSM:LightGray:Labels",
-   "OSM:DarkGray",
-   "OSM-DarkGray:Base",
-   "OSM-DarkGray:Labels",
-   "ArcGIS:Terrain",
-   "ArcGIS:Terrain:Base",
-   "ArcGIS:Terrain:Detail",
-   "ArcGIS:Community",
-   "ArcGIS:ChartedTerritory",
-   "ArcGIS:ChartedTerritory:Base",
-   "ArcGIS:ColoredPencil",
-   "ArcGIS:Nova",
-   "ArcGIS:ModernAntique",
-   "ArcGIS:ModernAntique:Base",
-   "ArcGIS:Midcentury",
-   "ArcGIS:Newspaper",
-   "ArcGIS:Hillshade:Light",
-   "ArcGIS:Hillshade:Dark"
- ];
-
- vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
-       apiKey
-     });
-     allEnums.forEach((enumString) => {
-       vectorTiles[enumString] = L.esri.Vector.vectorBasemapLayer(enumString, {
-apiKey       });
-     });
-
-     L.control
-       .layers(vectorTiles, null, {
-         collapsed: false
-       })
-       .addTo(map);
-
-     vectorTiles.Default.addTo(map);
 
 //PRINT
 src="leaflet-easyPrint-gh-pages/src/index.js"
