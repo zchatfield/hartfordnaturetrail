@@ -123,29 +123,6 @@ var searchControl = new L.Control.Search({
 
 
 /// Routing
-
-// var routeOn = L.easyButton({
-//   states: [{
-//     stateName: 'route',
-//     icon: 'fa-map-marker',
-//     title: 'add a route option',
-//     onClick: function(btn, map) {
-//       map.setView([41.74403206040221, -72.68307359815084], 15);
-//       btn.state('no-route');
-//     }
-//   }, {
-//   stateName: 'no-route',
-//     icon: 'fa-map-marker',
-//     title: 'remove route option',
-//     onClick: function(btn, map) {
-//         map.setView([41.74403206040221, -72.68307359815084], 15);
-//         btn.state('route');
-//     }
-//   }]
-// });
-/*routeOn.addTo(map); */
-
-
 L.easyButton( 'fa-map-marker', function(){
 
   function button(label, container) {
@@ -157,6 +134,10 @@ L.easyButton( 'fa-map-marker', function(){
 
   var control = L.Routing.control({
       waypoints: [null],
+      // router: new L.Routing.osrmv1({
+      //   language: 'en',
+      // }),
+      collapsible: true,
       routeWhileDragging: true,
       geocoder: L.Control.Geocoder.nominatim(),
       show: true,
@@ -183,9 +164,8 @@ L.easyButton( 'fa-map-marker', function(){
 
       L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
   });
-
-  map.flyTo([41.743988, -72.673088], 14)
 }).addTo(map);
+
 
 
 //PRINT
