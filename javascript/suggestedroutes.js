@@ -1,4 +1,4 @@
-var trailroutes = {
+var suggestedroutes = {
   "type": "FeatureCollection",
   "features": [
   { "type": "Feature",
