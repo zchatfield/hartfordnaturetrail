@@ -70,7 +70,7 @@
     <h2>South Hartford Nature Trail</h2>
   </div>
     <!--DIV TEXT-->
-  <div id="routing">
+  <div id="routing" class="no-printme">
     <h3>Explore the trail!<h3>
       <p>Click on the route button to begin. Click anywhere on the map to set the start and end points, or enter in the address and city in the top right corner.
         A route will appear between these locations. You can also drag the points to where you would like to go.
@@ -82,6 +82,9 @@
   <div id="maprouting">
       <script src="javascript/routemap.js"></script>
       <script src="javascript/PRINT.js"></script>
+  </div>
+  <div id="print" class="no-printme">
+    <button type="button" onclick="window.print(); return false;"><i class="fa fa-print"></i> Print this map</button>
   </div>
 <br>
     <div id="copyright">
