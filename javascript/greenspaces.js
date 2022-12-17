@@ -5,7 +5,7 @@ var greenspaces = {
       "type": "Feature",
       "properties": {
         "name": "Pope Park",
-        "popupContent": "Pope Park"
+        "popupContent": "Pope Park. Learn more <a class='link-to' href='index.html' data-parent='#collapseExample'>here</a>."
       },
       "geometry": {
         "coordinates": [
