@@ -166,9 +166,92 @@ L.easyButton( 'fa-map-marker', function(){
   });
 }).addTo(map);
 
+// Full Screen
+map.addControl(new L.Control.Fullscreen());
 
+
+// Search bar --> filtered option
+var fuse = new Fuse(greenspaces.features, {
+  keys: [
+    'properties.name',
+    'properties.description',
+  ]
+});
+
+var searchControl = new L.Control.Search({
+		layer: green,
+		propertyName: 'name',
+		marker: false,
+    autoType: true,
+    position: "topleft",
+		moveToLocation: function(latlng, title, map) {
+  			map.setView(latlng, 16);
+		},
+    filterData: function(text, records) {
+      var jsons = fuse.search(text),
+        ret = {}, key;
+
+      for(var i in jsons) {
+        key = jsons[i].properties.name;
+        ret[ key ]= records[key];
+      }
+
+      console.log(jsons,ret);
+      return ret;
+    }
+	});
+
+	searchControl.on('search:locationfound', function(e) {
+		if(e.layer._popup)
+			e.layer.openPopup();
+
+	}).on('search:collapsed', function(e) {
+		featuresLayer.eachLayer(function(layer) {
+		});
+	});
+
+	map.addControl(searchControl);
+
+
+// Selector
+
+var selector = L.control({
+  position: 'topleft'
+});
+
+selector.onAdd = function(map) {
+  var div = L.DomUtil.create('div', 'mySelector');
+  div.innerHTML = '<select id="marker_select"><option value="init">(select a green space)</option></select>';
+  return div;
+};
+
+selector.addTo(map);
+
+green.eachLayer(function(layer) {
+  var optionElement = document.createElement("option");
+  optionElement.innerHTML = layer.feature.properties.name;
+  optionElement.value = layer._leaflet_id;
+  L.DomUtil.get("marker_select").appendChild(optionElement);
+});
+
+var marker_select = L.DomUtil.get("marker_select");
+
+L.DomEvent.addListener(marker_select, 'click', function(e) {
+  L.DomEvent.stopPropagation(e);
+});
+
+L.DomEvent.addListener(marker_select, 'change', changeHandler);
+
+function changeHandler(e) {
+  if (e.target.value == "init") {
+    map.closePopup();
+  } else {
+    green.getLayer(e.target.value).openPopup();
+  }
+}
 
 //PRINT
+/*
 src="leaflet-easyPrint-gh-pages/src/index.js"
 
 L.easyPrint({
@@ -181,6 +264,6 @@ var printPlugin = L.easyPrint({
 	hidden: true,
 	sizeModes: ['A4Portrait']
 }).addTo(map);
-printPlugin.printMap('A4Portrait', 'MyFileName');
+printPlugin.printMap('A4Portrait', 'MyFileName'); */
 
 //ZOOM SLIDER FULL CODE PLUG IN
