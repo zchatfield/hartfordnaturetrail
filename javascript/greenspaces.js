@@ -5,6 +5,7 @@ var greenspaces = {
       "type": "Feature",
       "properties": {
         "name": "Pope Park",
+        "description": "park walking trails pond atheltic fields recreation center",
         "popupContent": "Pope Park. Learn more <a class='link-to' href='index.html' data-parent='#collapseExample'>here</a>."
       },
       "geometry": {
@@ -379,6 +380,7 @@ var greenspaces = {
       "type": "Feature",
           "properties": {
             "name":"Free Center",
+            "description": "flower community garden",
             "popupContent":"Free Center edible landscape and community garden"},
           "geometry": {
             "coordinates": [
@@ -436,6 +438,7 @@ var greenspaces = {
           "type": "Feature",
           "properties": {
           "name": "Summer of Solutions",
+          "description": "community garden food pantry ",
           "popupContent": "<b>Summer of Solutions</b> community garden. <br>578 Zion St"},
           "geometry": {
             "coordinates": [
@@ -469,6 +472,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Trinity College",
+         "description": "community garden food beehives",
          "popupContent":"Trinity College community garden"},
          "geometry": {
            "coordinates": [
@@ -501,8 +505,9 @@ var greenspaces = {
        {
          "type": "Feature",
          "properties": {
-         "name":"Cedar Hill Cemetary",
-         "popupContent":"Cedar Hill Cemetary. Click <a href='#CH-tab' data-parent='#CH-open'>here</a> to learn more."},
+         "name":"Cedar Hill Cemetery",
+         "description": "cemetery walking biking pond",
+         "popupContent":"Cedar Hill Cemetery. Click <a href='#CH-tab' data-parent='#CH-open'>here</a> to learn more."},
          "geometry": {
            "coordinates": [
              [
@@ -923,6 +928,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Zion Hill Cemetary",
+         "description": "cemetery historic walking flowers",
          "popupContent":"Zion Hill Cemetary"},
          "geometry": {
            "coordinates": [
@@ -1024,6 +1030,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Goodwin Park",
+        "description": "park tennis baseball basketball golf ponds walking trails",
         "popupContent":"Goodwin Park"},
         "geometry": {
           "coordinates": [
@@ -1153,6 +1160,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rocky Ridge Park",
+        "description": "park football softball walking",
         "popupContent":"Rocky Ridge Park"},
         "geometry": {
           "coordinates": [
@@ -1346,6 +1354,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Colt Park",
+        "description": "park walking pond fountains playground splash pad swimming pool",
         "popupContent":"Colt Park"},
         "geometry": {
           "coordinates": [
@@ -1599,6 +1608,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
           "name": "Porter Memorial Park",
+          "description": "park public",
           "popupContent": "Porter Memorial Park"
         },
         "geometry": {
@@ -1641,6 +1651,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Charter Oak Landing",
+        "description": "playground park boat launch walking",
         "popupContent":"Charter Oak Landing"},
         "geometry": {
           "coordinates": [
@@ -1766,6 +1777,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Hyland Memorial Park",
+        "description": "park playground baseball basketball tee-ball soccer walking",
         "popupContent":"Hyland Memorial Park"},
         "geometry": {
           "coordinates": [
@@ -1843,6 +1855,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rice Heights Park",
+        "description": "park playground basketball baseball",
         "popupContent":"Rice Heights Park"},
         "geometry": {
           "coordinates": [
@@ -2096,6 +2109,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Brookfield Wetlands",
+        "description": "nature preserve wetlands",
         "popupContent":"Brookfield Wetlands. Learn more <a class='linkTo' href='#BW-tab' panel.collapse.show='BW-tab'>here</a>."},
         "geometry": {
           "coordinates": [
@@ -2185,6 +2199,7 @@ var greenspaces = {
           "type": "Feature",
           "properties": {
           "name":"Cemetery Brook Nature Trail",
+          "description": "trail biking walking water feature",
           "popupContent":"<b>Cemetery Brook Nature Trail</b> area. <br>Entrance on 147 Broadview Terrace."},
           "geometry": {
             "coordinates": [
