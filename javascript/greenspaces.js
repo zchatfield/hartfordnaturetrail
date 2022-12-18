@@ -436,7 +436,7 @@ var greenspaces = {
           "type": "Feature",
           "properties": {
           "name": "Summer of Solutions",
-          "popupContent": "Summer of Solutions community garden"},
+          "popupContent": "<b>Summer of Solutions</b> community garden. <br>578 Zion St"},
           "geometry": {
             "coordinates": [
               [
@@ -2180,6 +2180,47 @@ var greenspaces = {
           ],
           "type": "Polygon"
         }
-      }
+      },
+        {
+          "type": "Feature",
+          "properties": {
+          "name":"Cemetery Brook Nature Trail",
+          "popupContent":"<b>Cemetery Brook Nature Trail</b> area. <br>Entrance on 147 Broadview Terrace."},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -72.70212631438609,
+                  41.74337934105748
+                ],
+                [
+                  -72.7032050111214,
+                  41.74300040153295
+                ],
+                [
+                  -72.70444740113545,
+                  41.74271228072823
+                ],
+                [
+                  -72.70412001457784,
+                  41.74160989353891
+                ],
+                [
+                  -72.70243691188963,
+                  41.74182598797361
+                ],
+                [
+                  -72.70133303157255,
+                  41.74217361662508
+                ],
+                [
+                  -72.70212631438609,
+                  41.74337934105748
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
   ]
 }
