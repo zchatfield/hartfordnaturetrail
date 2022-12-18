@@ -94,6 +94,7 @@ var legend = L.control({ position: "bottomleft" });
     div.innerHTML += '<i style="background: green"></i><span>Green Spaces</span><br>';
     div.innerHTML += '<i style="background: grey"></i><span>Neighborhood Boundaries</span><br>';
     div.innerHTML += '<i style="background: red"></i><span>Bike Routes</span><br>';
+    div.innerHTML += '<i style="background: black"></i><span>Suggested Routes</span><br>';
     return div;
   };
 legend.addTo(map);

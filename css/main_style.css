@@ -57,6 +57,17 @@ body {
   background-color: #d6eecd ;
 }
 
+a {
+  color:#008000;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #header {
   height: 70px;
   /*width: 95vw; */
