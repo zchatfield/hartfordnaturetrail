@@ -13,22 +13,30 @@ Colorblind safe color palette from colorbrewer2.org.
 #808080 - gray
 */
 
-
+h1 {
+  color:#008000
+  font-family: Georgia, serif;
+  font-size: 40px;
+  font-weight:lighter;
+}
 h2 {
   color:#f5f5f5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, serif;
+  font-size: 40px;
+  font-weight:lighter;
 }
 
 h3 {
   color:#008000;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, sans-serif;
   font-weight: normal;
+  font-size: 17px;
 }
 
 p {
   color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, sans-serif;
+  font-size: 16px;
   font-weight: normal;
 }
 
@@ -53,10 +61,10 @@ body {
   height: 70px;
   width: 95vw;
   background-color: #008000;
-  box-shadow: 0px 5px 8px grey;
+  box-shadow: 0px 5px 8px white;
   text-align: center;
-  padding: 10px;
-  position: relative;
+  padding: 12px;
+  position:relative;
   z-index: 2;
 }
 
@@ -77,9 +85,9 @@ height: 100px;
 width: 95vw;
 background-color: #d6eecd;
 color:#008000;
-text-align: justify;
+text-align: center;
 padding:10px;
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
 
 
@@ -91,7 +99,7 @@ color:#008000;
 text-align: justify;
 font-weight: normal;
 padding:10px;
-margin-bottom: 30px;
+margin-bottom: 50px;
 }
 
 #mapid{
@@ -107,7 +115,9 @@ margin-bottom: 30px;
   height: 550px;
   margin-top: 10px;
   position:inherit;
-  padding: 10px;
+  padding: 20px;
+  margin-top:30px;
+  margin-bottom:10px;
 }
 
 #basemaps-wrapper {
@@ -132,7 +142,27 @@ margin-bottom: 30px;
   padding-top: 20px;
 }
 
+.button {
+  background-color: #008000;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-stretch: expanded;
+}
 
+.button:hover {
+  background-color: #d6eecd;
+  color: #008000;
+}
 .leaflet-routing-container-hide .leaflet-routing-collapse-btn {
   display: block;
   width: 100%;
@@ -187,8 +217,12 @@ margin-bottom: 30px;
   border:none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
   transition: 0.4s;
+  font-family: Georgia, sans-serif;
+  font-weight:lighter;
+  font-stretch:extra-expanded;
+  margin-bottom: 2px;
 }
 
 .active, .accordion:hover {
