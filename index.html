@@ -104,29 +104,36 @@
 
   <!--window for more information, maybe we can get it to populate based on map click -->
   <div id="learn-more">
+    <script>
+    jQuery(document).ready(function($) {
+  $('.open_accordion .x-btn').click(function(e) {
+
+    var $this = $(this);
+    var thisHref = $this.attr('href');
+    var accordion = $(thisHref).find('.x-accordion-toggle');
+
+    if ( accordion.length && $(thisHref).hasClass('x-accordion-group') ) {
+      e.preventDefault();
+
+      accordion.trigger('click');
+    }
+
+  });
+});
+    </script>
     <h1>Learn more about South Hartford green spaces<h1>
     <h3>This is a curated list of green spaces that will be continuously updated based on community input.
-    <a href="#home">Click here to return to the map.</a></h3>
+    <a href="#home">Click here to return to the map.</a> <a href="#BW-open" onclick="".accordion.trigger>TEST</a></h3>
 </div>
-<div id="accordion" class="w3-container">
-  <script>
-  function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-  </script>
+<div id="accordion">
     <button class="accordion" id="BW-tab">Brookfield Wetlands</button>
-    <div class="panel">
+    <div class="panel" id="BW-open">
       <p>The <b>Brookfield Wetlands</b> are a nature preserve located in the Behind the Rocks neighborhood of Hartford. They border the South Brook section of the Park River.
       <br>There's so much to learn about the parks and wetlands hidden in the city!</p>
     </div>
 
-    <button class="accordion" onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align" id="CH-tab">Cedar Hill Cemetery</button>
-    <div class="panel">
+    <button class="accordion" id="CH-tab">Cedar Hill Cemetery</button>
+    <div class="panel" data-target="CH-open">
       <p><b>Cedar Hill Cemetery</b> is more than just a place of burial. It has beautiful grounds for walking, biking, and exploring. You can learn more from their website <a href="https://www.cedarhillcemetery.org/grounds">here</a>.
         Enjoy the view of the Llyn Mawr pond and their open green space, called "ornamental foreground" on their <a href="https://cedarhillcemetery.org/wp-content/uploads/2013/09/Sectionmap-Model.pdf">visitors map</a>! Beyond this area, you will find a short nature walk through a lightly wooded part of the cemetary grounds.</p>
     </div>
