@@ -108,8 +108,16 @@
     <h3>This is a curated list of green spaces that will be continuously updated based on community input.
     <a href="#home">Click here to return to the map.</a></h3>
 </div>
-<div id="accordion">
+<div id="accordion" class="w3-container">
   <script>
+  function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
   </script>
     <button class="accordion" id="BW-tab">Brookfield Wetlands</button>
     <div class="panel">
@@ -117,7 +125,7 @@
       <br>There's so much to learn about the parks and wetlands hidden in the city!</p>
     </div>
 
-    <button class="accordion">Cedar Hill Cemetery</button>
+    <button class="accordion" onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align" id="CH-tab">Cedar Hill Cemetery</button>
     <div class="panel">
       <p><b>Cedar Hill Cemetery</b> is more than just a place of burial. It has beautiful grounds for walking, biking, and exploring. You can learn more from their website <a href="https://www.cedarhillcemetery.org/grounds">here</a>.
         Enjoy the view of the Llyn Mawr pond and their open green space, called "ornamental foreground" on their <a href="https://cedarhillcemetery.org/wp-content/uploads/2013/09/Sectionmap-Model.pdf">visitors map</a>! Beyond this area, you will find a short nature walk through a lightly wooded part of the cemetary grounds.</p>

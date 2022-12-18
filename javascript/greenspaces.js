@@ -502,7 +502,7 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Cedar Hill Cemetary",
-         "popupContent":"Cedar Hill Cemetary"},
+         "popupContent":"Cedar Hill Cemetary. Click <a href='#CH-tab' onclick='myFunction('Demo1')'>here</a> to learn more."},
          "geometry": {
            "coordinates": [
              [
