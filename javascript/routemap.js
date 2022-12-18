@@ -1,6 +1,6 @@
 
 // Map variable with center and zoom
-var map = L.map('maprouting').setView([41.74403206040221, -72.68307359815084], 14);
+var map = L.map('maprouting').setView([41.741026389505876, -72.6868740655906], 14);
 
 
 // Basemap -  Open Street Map
@@ -78,7 +78,7 @@ var green = L.geoJson(greenspaces, {
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
-      latlng: L.latLng([41.74403206040221, -72.68307359815084]),
+      latlng: L.latLng([41.741026389505876, -72.6868740655906]),
       zoom: 14,
   }).addTo(map);
 

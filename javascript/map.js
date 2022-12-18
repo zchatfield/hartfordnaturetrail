@@ -12,7 +12,7 @@
 
 const apiKey = arc_apikey;
 
-var map = L.map('mapid').setView([41.74403206040221, -72.68307359815084], 14);
+var map = L.map('mapid').setView([41.741026389505876, -72.6868740655906], 14);
 
       const vectorTiles = {};
       const allEnums = [
@@ -127,7 +127,7 @@ var suggested = L.geoJson(suggestedroutes, {
   L.control.resetView({
       position: "topleft",
       title: "Reset view",
-      latlng: L.latLng([41.74403206040221, -72.68307359815084]),
+      latlng: L.latLng([41.741026389505876, -72.6868740655906]),
       zoom: 14,
   }).addTo(map);
 
