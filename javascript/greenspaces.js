@@ -2096,7 +2096,7 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Brookfield Wetlands",
-        "popupContent":"Brookfield Wetlands. Learn more <a class='linkTo' href='#BW-tab' panel.openOn='BW-tab'>here</a>."},
+        "popupContent":"Brookfield Wetlands. Learn more <a class='linkTo' href='#BW-tab' panel.collapse.show='BW-tab'>here</a>."},
         "geometry": {
           "coordinates": [
             [
