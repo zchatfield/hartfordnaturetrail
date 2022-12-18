@@ -3,7 +3,8 @@ var suggestedroutes = {
   "features": [
   { "type": "Feature",
       "properties": {
-      "name":"Trinity College path"},
+      "name":"Trinity College path",
+      "popupContent":"Trinity College suggested route. Make your way through Rocky Ridge Park, past Zion Hill Cemetery, and end at the Trinity College community garden."},
       "geometry": {
         "coordinates": [
           [

@@ -63,15 +63,19 @@ var green = L.geoJson(greenspaces, {
   })
 
 // Recommended trailroutes
-/* var trails = L.geoJson(routes,{
+var routes = L.geoJson(suggestedroutes, {
   style: function (feature){
-    return{
-      color: 'dark green',
-      weight:1,
+    return {
+      color: 'black',
+      fillOpacity:'0',
+      weight:3,
       opacity:1
     };
   },
-}).addTo(map); */
+  onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.popupContent);
+  },
+}).addTo(map);
 
 
 // Reset View plug in
@@ -248,6 +252,44 @@ function changeHandler(e) {
     map.closePopup();
   } else {
     green.getLayer(e.target.value).openPopup();
+  }
+}
+
+// Selector for Routes
+// Selector
+
+var selector2 = L.control({
+  position: 'topleft'
+});
+
+selector2.onAdd = function(map) {
+  var div = L.DomUtil.create('div', 'mySelector');
+  div.innerHTML = '<select id="marker_select"><option value="init">(select a suggested route)</option></select>';
+  return div;
+};
+
+selector2.addTo(map);
+
+suggestedroutes.eachLayer(function(layer) {
+  var optionElement = document.createElement("option");
+  optionElement.innerHTML = layer.feature.properties.name;
+  optionElement.value = layer._leaflet_id;
+  L.DomUtil.get("marker_select").appendChild(optionElement);
+});
+
+var marker_select2 = L.DomUtil.get("marker_select2");
+
+L.DomEvent.addListener(marker_select2, 'click', function(e) {
+  L.DomEvent.stopPropagation(e);
+});
+
+L.DomEvent.addListener(marker_select2, 'change', changeHandler2);
+
+function changeHandler2(e) {
+  if (e.target.value == "init") {
+    map.closePopup();
+  } else {
+    suggestedroutes.getLayer(e.target.value).openPopup();
   }
 }
 
