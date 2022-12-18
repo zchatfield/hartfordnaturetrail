@@ -100,6 +100,7 @@ L.control.scale().addTo(map);
 
 
 // Search Bar
+/*
 var searchControl = new L.Control.Search({
 		layer: green,
 		propertyName: 'name',
@@ -120,7 +121,7 @@ var searchControl = new L.Control.Search({
 	});
 
 	map.addControl(searchControl);
-
+*/
 
 /// Routing
 L.easyButton( 'fa-map-marker', function(){
