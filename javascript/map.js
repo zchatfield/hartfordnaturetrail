@@ -85,25 +85,6 @@ var green = L.geoJson(greenspaces, {
     map.setView(e.latlng, 16);
   })
 
-//Existing trails
-/*
-var trails = L.geoJson(trails, {
-        	style: function (feature) {
-        		return {
-              color: 'green',
-              fillOpacity: '0.6',
-              weight: 1
-            };
-        	},
-        	onEachFeature: function (feature, layer) {
-        		  layer.bindPopup(feature.properties.popupContent);
-        	},
-        }).addTo(map);
-
-  green.on('click', function(e){
-    map.setView(e.latlng, 16);
-  })
-
 //Suggested/created trails
 /*
 var suggested = L.geoJson(suggestedroutes, {
@@ -151,7 +132,6 @@ L.control.scale().addTo(map);
 // Full Screen
 map.addControl(new L.Control.Fullscreen());
 
-/*
 // Search bar --> filtered option
 var fuse = new Fuse(greenspaces.features, {
   keys: [
@@ -193,10 +173,9 @@ var searchControl = new L.Control.Search({
 	});
 
 	map.addControl(searchControl);
-*/
 
 // Selector
-
+/*
 var selector = L.control({
   position: 'topleft'
 });
@@ -231,3 +210,4 @@ function changeHandler(e) {
     green.getLayer(e.target.value).openPopup();
   }
 }
+*/
