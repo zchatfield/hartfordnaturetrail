@@ -265,17 +265,17 @@ var selector2 = L.control({
 
 selector2.onAdd = function(map) {
   var div = L.DomUtil.create('div', 'mySelector');
-  div.innerHTML = '<select id="marker_select"><option value="init">(select a suggested route)</option></select>';
+  div.innerHTML = '<select id="marker_select2"><option value="init">(select a suggested route)</option></select>';
   return div;
 };
 
 selector2.addTo(map);
 
-suggestedroutes.eachLayer(function(layer) {
+routes.eachLayer(function(layer) {
   var optionElement = document.createElement("option");
   optionElement.innerHTML = layer.feature.properties.name;
   optionElement.value = layer._leaflet_id;
-  L.DomUtil.get("marker_select").appendChild(optionElement);
+  L.DomUtil.get("marker_select2").appendChild(optionElement);
 });
 
 var marker_select2 = L.DomUtil.get("marker_select2");
@@ -290,7 +290,7 @@ function changeHandler2(e) {
   if (e.target.value == "init") {
     map.closePopup();
   } else {
-    suggestedroutes.getLayer(e.target.value).openPopup();
+    routes.getLayer(e.target.value).openPopup();
   }
 }
 
