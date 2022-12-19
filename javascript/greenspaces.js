@@ -6,7 +6,7 @@ var greenspaces = {
       "properties": {
         "name": "Pope Park",
         "description": "park walking trails pond atheltic fields recreation center",
-        "popupContent": "<b>Pope Park</b><br> Entrance at 30 Pope Park Dr"
+        "popupContent": "<b>Pope Park</b><br> Entrance at 30 Pope Park Dr"},
 
       "geometry": {
         "coordinates": [
@@ -380,12 +380,8 @@ var greenspaces = {
       "type": "Feature",
           "properties": {
             "name":"Free Center",
-<<<<<<< HEAD
-            "popupContent":"<b>Free Center</b> edible landscape and community garden<br>460 New Britain Ave"},
-=======
             "description": "flower community garden",
-            "popupContent":"Free Center edible landscape and community garden"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+            "popupContent":"<b>Free Center</b> edible landscape and community garden<br>460 New Britain Ave"},
           "geometry": {
             "coordinates": [
               [
@@ -476,12 +472,8 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Trinity College",
-<<<<<<< HEAD
-         "popupContent":"<b>Trinity College</b> community garden and beehives<br>1300 Broad St"},
-=======
          "description": "community garden food beehives",
-         "popupContent":"Trinity College community garden"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+         "popupContent":"<b>Trinity College</b> community garden and beehives<br>1300 Broad St"},
          "geometry": {
            "coordinates": [
              [
@@ -513,14 +505,9 @@ var greenspaces = {
        {
          "type": "Feature",
          "properties": {
-<<<<<<< HEAD
-         "name":"Cedar Hill Cemetary",
-         "popupContent":"<b>Cedar Hill Cemetary</b><br>453 Fairfield Ave"},
-=======
          "name":"Cedar Hill Cemetery",
          "description": "cemetery walking biking pond",
-         "popupContent":"Cedar Hill Cemetery. Click <a href='#CH-tab' data-parent='#CH-open'>here</a> to learn more."},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+         "popupContent":"<b>Cedar Hill Cemetary</b><br>453 Fairfield Ave"},
          "geometry": {
            "coordinates": [
              [
@@ -941,12 +928,8 @@ var greenspaces = {
          "type": "Feature",
          "properties": {
          "name":"Zion Hill Cemetary",
-<<<<<<< HEAD
-         "popupContent":"<b>Zion Hill Cemetary</b><br>Entrance 520 Zion St"},
-=======
          "description": "cemetery historic walking flowers",
-         "popupContent":"Zion Hill Cemetary"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+         "popupContent":"<b>Zion Hill Cemetary</b><br>Entrance 520 Zion St"},
          "geometry": {
            "coordinates": [
              [
@@ -1047,12 +1030,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Goodwin Park",
-<<<<<<< HEAD
-        "popupContent":"<b>Goodwin Park</b><br>Entrance at 128 Goodwin Park Rd<br>Public pool at 341 South St<br>Golf course at 1130 Maple Ave"},
-=======
         "description": "park tennis baseball basketball golf ponds walking trails",
-        "popupContent":"Goodwin Park"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Goodwin Park</b><br>Entrance at 128 Goodwin Park Rd<br>Public pool at 341 South St<br>Golf course at 1130 Maple Ave"},
         "geometry": {
           "coordinates": [
             [
@@ -1181,12 +1160,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rocky Ridge Park",
-<<<<<<< HEAD
-        "popupContent":"<b>Rocky Ridge Park</b><br>Parking and playground entrance at 130 Zion St"},
-=======
         "description": "park football softball walking",
-        "popupContent":"Rocky Ridge Park"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Rocky Ridge Park</b><br>Parking and playground entrance at 130 Zion St"},
         "geometry": {
           "coordinates": [
             [
@@ -1379,12 +1354,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Colt Park",
-<<<<<<< HEAD
-        "popupContent":"<b>Colt Park</b><br>106 Wethersfield Ave"},
-=======
         "description": "park walking pond fountains playground splash pad swimming pool",
-        "popupContent":"Colt Park"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Colt Park</b><br>106 Wethersfield Ave"},
         "geometry": {
           "coordinates": [
             [
@@ -1637,13 +1608,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
           "name": "Porter Memorial Park",
-<<<<<<< HEAD
-          "popupContent": "<b>Porter Memorial Park</b><br>Entrance at 49 Wyllys St"
-=======
           "description": "park public",
-          "popupContent": "Porter Memorial Park"
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
-        },
+          "popupContent": "<b>Porter Memorial Park</b><br>Entrance at 49 Wyllys St"},
         "geometry": {
           "coordinates": [
             [
@@ -1684,12 +1650,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Charter Oak Landing",
-<<<<<<< HEAD
-        "popupContent":"<b>Charter Oak Landing</b><br>Driving entrance at 50 Reserve Rd"},
-=======
         "description": "playground park boat launch walking",
-        "popupContent":"Charter Oak Landing"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Charter Oak Landing</b><br>Driving entrance at 50 Reserve Rd"},
         "geometry": {
           "coordinates": [
             [
@@ -1814,12 +1776,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Hyland Memorial Park",
-<<<<<<< HEAD
-        "popupContent":"<b>Hyland Memorial Park</b><br>Entrance at the Hyland Recreation Center at 355 New Britain Ave"},
-=======
         "description": "park playground baseball basketball tee-ball soccer walking",
-        "popupContent":"Hyland Memorial Park"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Hyland Memorial Park</b><br>Entrance at the Hyland Recreation Center at 355 New Britain Ave"},
         "geometry": {
           "coordinates": [
             [
@@ -1896,12 +1854,8 @@ var greenspaces = {
         "type": "Feature",
         "properties": {
         "name":"Rice Heights Park",
-<<<<<<< HEAD
-        "popupContent":"<b>Rice Heights</b> park and playground<br>Entrance behind Breakthrough Magnet School at 290 Brookfield St"},
-=======
         "description": "park playground basketball baseball",
-        "popupContent":"Rice Heights Park"},
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
+        "popupContent":"<b>Rice Heights</b> park and playground<br>Entrance behind Breakthrough Magnet School at 290 Brookfield St"},
         "geometry": {
           "coordinates": [
             [
@@ -2150,99 +2104,6 @@ var greenspaces = {
           "type": "Polygon"
         }
       },
-<<<<<<< HEAD
-=======
-      {
-        "type": "Feature",
-        "properties": {
-        "name":"Brookfield Wetlands",
-        "description": "nature preserve wetlands",
-        "popupContent":"Brookfield Wetlands. Learn more <a class='linkTo' href='#BW-tab' panel.collapse.show='BW-tab'>here</a>."},
-        "geometry": {
-          "coordinates": [
-            [
-              [
-                -72.71045934608429,
-                41.74289515126756
-              ],
-              [
-                -72.71027224121734,
-                41.74391027223476
-              ],
-              [
-                -72.70942725182495,
-                41.74490505209485
-              ],
-              [
-                -72.70902975560655,
-                41.745457127880684
-              ],
-              [
-                -72.7082124414726,
-                41.746073261235125
-              ],
-              [
-                -72.70703142570305,
-                41.74758488730805
-              ],
-              [
-                -72.70598346978156,
-                41.748678522939684
-              ],
-              [
-                -72.70531208833624,
-                41.74930084946811
-              ],
-              [
-                -72.70462036199831,
-                41.74964995683044
-              ],
-              [
-                -72.70557657193602,
-                41.74942227833134
-              ],
-              [
-                -72.70641071251971,
-                41.74917942037527
-              ],
-              [
-                -72.70763140605717,
-                41.7483749468343
-              ],
-              [
-                -72.70856727110228,
-                41.74767671634379
-              ],
-              [
-                -72.70934037700901,
-                41.746826686366575
-              ],
-              [
-                -72.71023555226972,
-                41.74565787677116
-              ],
-              [
-                -72.71117141731483,
-                41.74471674189243
-              ],
-              [
-                -72.71155797026778,
-                41.74421580963812
-              ],
-              [
-                -72.71194452322236,
-                41.74266744896687
-              ],
-              [
-                -72.71045934608429,
-                41.74289515126756
-              ]
-            ]
-          ],
-          "type": "Polygon"
-        }
-      },
->>>>>>> 75f1101a69f08013901e882af8c856e1b5292a47
         {
           "type": "Feature",
           "properties": {
