@@ -4,7 +4,7 @@ var suggestedroutes = {
   { "type": "Feature",
       "properties": {
       "name":"Trinity College path",
-      "popupContent":"Trinity College suggested route. Make your way through Rocky Ridge Park, past Zion Hill Cemetery, and end at the Trinity College community garden."},
+      "popupContent":"Make your way through <b>Rocky Ridge Park</b>, past <b>Zion Hill Cemetery</b>, and end at the <b>Trinity College</b> community garden."},
       "geometry": {
         "coordinates": [
           [
@@ -135,8 +135,7 @@ var suggestedroutes = {
           "type": "Feature",
           "properties": {
             "name": "Summer of Solutions to Pope Park",
-            "popupContent":"Start at the Summer of Solutions community garden and make your way to the historic Pope Park."
-          },
+            "popupContent":"Start at the <b>Summer of Solutions</b> community garden and make your way to the historic <b>Pope Park</b>. There are many paths to walk, a pond to enjoy the view from, fields to play at, and a playscape."},
           "geometry": {
             "coordinates": [
           [
@@ -327,7 +326,7 @@ var suggestedroutes = {
         "type": "Feature",
         "properties": {
         "name":"Free Center to Brookfield",
-        "popupContent":""},
+        "popupContent":"Start at the <b>Free Center</b> garden and edible landscape, and pick anything in season! Then make your way to the <b>Cemetery Brook Nature Trail</b> behind the Environmental Sciences Magnet School. From there, you can go to the <b>Rice Heights</b> park and playground and end at the trail entrance of the Brookfield Wetlands."},
         "geometry": {
           "coordinates": [
           [
@@ -502,7 +501,7 @@ var suggestedroutes = {
           "type": "Feature",
           "properties": {
           "name":"Porter Memorial to Charter Oak Landing",
-          "popupContent":""},
+          "popupContent":"Begin at the small <b>Porter Memorial Park</b> and walk down Groton St to Colt Park. <b>Colt Park</b> has a variety of sights and paths to wander. After, you can stroll past the Colt Park Armory building to the walking entrance to <b>Charter Oak Landing</b> which goes under the overpass at the corner of Van Dyke Avenue. Alternatively, you can enter through the driving path at 50 Reserve Rd."},
           "geometry": {
             "coordinates": [
               [
@@ -897,7 +896,7 @@ var suggestedroutes = {
           "type": "Feature",
           "properties": {
           "name":"Goodwin Park to Cedar Hill",
-          "popupContent":""},
+          "popupContent":"Make your way through <b>Goodwin Park</b>. You can follow walking and biking paths, try out the golf course, or go to the pool and splash pad. Then you can make your way across the street to <b>Cedar Hill Cemetary</b> where you can enjoy the green spaces, pond, and walking paths there."},
           "geometry": {
             "coordinates": [
               [
