@@ -69,13 +69,12 @@ a:hover {
 }
 
 #header {
-  height: 70px;
-  /*width: 95vw; */
-  width:auto;
+  height: auto;
+  width: auto;
   background-color: #008000;
   box-shadow: 0px 5px 8px white;
   text-align: center;
-  padding: 12px;
+  padding: 5px;
   position:relative;
   z-index: 2;
 }
@@ -110,7 +109,7 @@ margin-top:0px;
   background-color:#008000;
   height: 10px;
   width:100%;
-  margin-top:15px;
+  margin-top: 20px;
   margin-bottom:2px;
 }
 
@@ -126,7 +125,7 @@ margin-bottom: 60px;
 }
 
 #mapid{
-  width: 63vw;
+  width: 65vw;
   height: 550px;
   margin-top: 5px;
   position:relative;
@@ -136,10 +135,9 @@ margin-bottom: 60px;
 #maprouting{
   width: 95vw;
   height: 550px;
-  margin-top: 10px;
   position:inherit;
   padding: 20px;
-  margin-top:30px;
+  margin-top:70px;
 }
 
 @media print{
@@ -147,6 +145,10 @@ margin-bottom: 60px;
     width:100%;
     position:center;
   }
+}
+
+#print {
+  margin-top: 10px;
 }
 
 #basemaps-wrapper {
@@ -168,7 +170,7 @@ margin-bottom: 60px;
   font-size: 14px;
   font-weight: normal;
   padding-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .button {
