@@ -54,7 +54,6 @@
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
 <link rel="stylesheet" href="https://github.com/rowanwins/leaflet-easyPrint.git"/>
-<script src="leaflet-easyPrint-gh-pages/src/index.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
 
@@ -73,12 +72,12 @@
 
 <body>
 <!-- Put introductory info here - description of the nature trail and links to org. partners -->
-<div id="body-container">
-  <div id="header">
+<div id="body-container" style="width:100% height:100%">
+  <div id="header" style="height:2%">
     <h2> Create Your Own South Hartford Nature Trail</h2>
   </div>
     <!--DIV TEXT-->
-  <div id="routing" class="no-printme">
+  <div id="routing" class="no-printme" style="width:100% height:30% padding-bottom:1px">
     <h3><b>Explore public green spaces in the Southern part of Hartford!</b><h3>
       <p>Click on the routing button [<i class="material-icons">&#xe0c8;</i>] to begin. Select anywhere on the map to set the start and end points, or enter in an address in the top right corner.
         A route will appear between these locations. You can also drag the points to where you would like to go.
@@ -87,7 +86,7 @@
       <button class="button" onclick="window.location.href='index.html';">Return to the home page </button>
   </div>
   <!-- Leaflet map here -->
-  <div id="maprouting">
+  <div id="maprouting" style="padding:1% width:100%">
       <script src="javascript/routemap.js"></script>
   </div>
   <div id="print" class="no-printme">
