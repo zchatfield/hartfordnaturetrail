@@ -96,35 +96,19 @@
       <input type="submit" name="submitBtn" value="Send">
     </form> -->
   </div>
-
   <!-- Leaflet map here -->
   <div id="mapid">
       <script src="javascript/map.js"></script>
   </div>
-
   <!--window for more information, maybe we can get it to populate based on map click -->
+  <div id="spacer"></div>
   <div id="learn-more">
-    <script>
-    jQuery(document).ready(function($) {
-  $('.open_accordion .x-btn').click(function(e) {
-
-    var $this = $(this);
-    var thisHref = $this.attr('href');
-    var accordion = $(thisHref).find('.x-accordion-toggle');
-
-    if ( accordion.length && $(thisHref).hasClass('x-accordion-group') ) {
-      e.preventDefault();
-
-      accordion.trigger('click');
-    }
-
-  });
-});
-    </script>
-    <h1>Learn more about each green space <a href="#TC">below</a><h1>
+    <h1>Learn more about each green space <a href="#TC">below</a><h1> <!--anchor link is in Trinity College tab-->
     <h3>This is a curated list of green spaces that will be continuously updated based on community input.
-    <a href="#home">Click here to return to the map.</a></h3>
+    <br><br><a href="#home">Click here to return to the map.</a></h3>
 </div>
+  <div id="spacer"></div>
+<div id="greenspacetabs">
     <button class="accordion" id="CH-tab">Cedar Hill Cemetery</button>
     <div class="panel" data-target="CH-open">
       <p><b>Cedar Hill Cemetery</b> is more than just a place of burial. It has beautiful grounds for walking, biking, and exploring. You can learn more from their website <a href="https://www.cedarhillcemetery.org/grounds">here</a>.
@@ -139,8 +123,7 @@
     <button class="accordion">Charter Oak Landing</button>
     <div class="panel">
       <p><b><a href="https://riverfront.org/charteroaklanding/">Charter Oak Landing</a></b> is just South of Downtown Hartford, and is along the Connecticut River. It includes a playground, boat launch, and connects to Great River Park with the Charter Oak Bridge pedestrian walkway (ADD TO MAP?).
-      <br><br>Nature highlights:
-      <br>Nesting eagles. </p>
+      <br><br>Nature highlights: Nesting eagles. </p>
     </div>
 
     <button class="accordion">Colt Park</button>
@@ -154,13 +137,7 @@
       <img src="images/FreeCenter.JPG" width=150 height=100/>
       <p><b>Free Center</b> is a community space located in the former Goodwin Library building. <br>
       Here, you can find a flower garden, daffodils planted as part of the city of Hartford's community hope garden initiative,
-      raised beds growing fruits, vegetables, and herbs, and their edible landscape.<br>
-      <br>Nature highlights:
-      <br> Flowers you can find: <br>
-      Food you can grow and harvest: <br>
-      Food you can forage: <br>
-      More fun nature to ID: <br>
-    <br> Find this on the map!</p>
+      raised beds growing fruits, vegetables, and herbs, and their edible landscape.</p>
     </div>
 
     <button class="accordion">Goodwin Park</button>
