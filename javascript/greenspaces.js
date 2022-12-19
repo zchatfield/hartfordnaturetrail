@@ -381,7 +381,7 @@ var greenspaces = {
           "properties": {
             "name":"Free Center",
             "description": "flower community garden",
-            "popupContent":"<b>Free Center</b> edible landscape and community garden<br>460 New Britain Ave"},
+            "popupContent":"<b>Free Center</b> edible landscape and garden<br>460 New Britain Ave"},
           "geometry": {
             "coordinates": [
               [
@@ -439,7 +439,7 @@ var greenspaces = {
           "properties": {
           "name": "Summer of Solutions",
           "description": "community garden food pantry ",
-          "popupContent": "<b>Summer of Solutions</b> community garden. <br>578 Zion St"},
+          "popupContent": "<b>Summer of Solutions</b> community garden<br>578 Zion St"},
           "geometry": {
             "coordinates": [
               [
@@ -927,9 +927,9 @@ var greenspaces = {
        {
          "type": "Feature",
          "properties": {
-         "name":"Zion Hill Cemetary",
+         "name":"Zion Hill Cemetery",
          "description": "cemetery historic walking flowers",
-         "popupContent":"<b>Zion Hill Cemetary</b><br>Entrance 520 Zion St"},
+         "popupContent":"<b>Zion Hill Cemetery</b><br>Entrance 520 Zion St"},
          "geometry": {
            "coordinates": [
              [
@@ -2109,7 +2109,7 @@ var greenspaces = {
           "properties": {
           "name":"Cemetery Brook Nature Trail",
           "description": "trail biking walking water feature",
-          "popupContent":"<b>Cemetery Brook Nature Trail</b> area. <br>Entrance on 147 Broadview Terrace."},
+          "popupContent":"<b>Cemetery Brook Nature Trail</b> area<br>Entrance on 147 Broadview Terrace"},
           "geometry": {
             "coordinates": [
               [

@@ -3,7 +3,7 @@ var suggestedroutes = {
   "features": [
   { "type": "Feature",
       "properties": {
-      "name":"Trinity College path",
+      "name":"Trinity College Path",
       "popupContent":"Make your way through <b>Rocky Ridge Park</b>, past <b>Zion Hill Cemetery</b>, and end at the <b>Trinity College</b> community garden."},
       "geometry": {
         "coordinates": [
@@ -896,7 +896,7 @@ var suggestedroutes = {
           "type": "Feature",
           "properties": {
           "name":"Goodwin Park to Cedar Hill",
-          "popupContent":"Make your way through <b>Goodwin Park</b>. You can follow walking and biking paths, try out the golf course, or go to the pool and splash pad. Then you can make your way across the street to <b>Cedar Hill Cemetary</b> where you can enjoy the green spaces, pond, and walking paths there."},
+          "popupContent":"Make your way through <b>Goodwin Park</b>. You can follow walking and biking paths, try out the golf course, or go to the pool and splash pad. Then you can make your way across the street to <b>Cedar Hill Cemetary</b> where you can enjoy the green spaces, pond, and walking paths."},
           "geometry": {
             "coordinates": [
               [
