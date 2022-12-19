@@ -175,7 +175,7 @@ L.easyButton( 'fa-map-marker', function(){
 // Full Screen
 map.addControl(new L.Control.Fullscreen());
 
-
+/*
 // Search bar --> filtered option
 var fuse = new Fuse(greenspaces.features, {
   keys: [
@@ -218,7 +218,7 @@ var searchControl = new L.Control.Search({
 
 	map.addControl(searchControl);
 
-
+*/
 // Selector
 
 var selector = L.control({
