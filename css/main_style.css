@@ -114,14 +114,15 @@ margin-top:0px;
 }
 
 #routing{
-height: 100px;
+height:auto;
+max-height: 40vw;
 width: 95vw;
 background-color: #d6eecd;
 color:#008000;
-text-align: justify;
+text-align: inherit;
 font-weight: normal;
 padding:10px;
-margin-bottom: 60px;
+overflow: auto;
 }
 
 #mapid{
@@ -134,10 +135,9 @@ margin-bottom: 60px;
 
 #maprouting{
   width: 95vw;
-  height: 550px;
-  position:inherit;
+  height: 580px;
   padding: 20px;
-  margin-top:70px;
+  position:inherit;
 }
 
 @media print{

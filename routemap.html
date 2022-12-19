@@ -5,6 +5,9 @@
    <meta charset="utf-8">
    <meta name="viewport" content="" width=device-width, initial-scale=1.9>
 
+<!-- Responsivness -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <!--Links to API key-->
     <script src="javascript/secret_key.js"></script>
 
@@ -72,12 +75,12 @@
 
 <body>
 <!-- Put introductory info here - description of the nature trail and links to org. partners -->
-<div id="body-container" style="width:100% height:100%">
+<div id="body-container" style="width:100% height:100%" class="w3-container">
   <div id="header" style="height:2%">
     <h2> Create Your Own South Hartford Nature Trail</h2>
   </div>
     <!--DIV TEXT-->
-  <div id="routing" class="no-printme" style="width:100% height:30% padding-bottom:1px">
+  <div id="routing" class="no-printme" style="width:100%">
     <h3><b>Explore public green spaces in the Southern part of Hartford!</b><h3>
       <p>Click on the routing button [<i class="material-icons">&#xe0c8;</i>] to begin. Select anywhere on the map to set the start and end points, or enter in an address in the top right corner.
         A route will appear between these locations. You can also drag the points to where you would like to go.
@@ -86,16 +89,16 @@
       <button class="button" onclick="window.location.href='index.html';">Return to the home page </button>
   </div>
   <!-- Leaflet map here -->
-  <div id="maprouting" style="padding:1% width:100%">
+  <div id="maprouting" style="padding:1% width:100%" class="w3-container">
       <script src="javascript/routemap.js"></script>
   </div>
   <div id="print" class="no-printme">
     <button type="button" onclick="window.print()" layout="landscape"><i class="fa fa-print"></i> Print this map</button>
   </div>
   <div>
-    <p><a href="#header">Back to top</a></p>
   </div>
   <div id="spacer"></div>
+  <p><a href="#header">Back to top</a></p>
     <div id="copyright">
         <script>
           var today = new Date();
