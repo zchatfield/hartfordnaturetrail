@@ -63,6 +63,7 @@
 
  <!--Main style sheet-->
   <link rel="stylesheet" type="text/css" href="css/main_style.css">
+  <link rel="stylesheet" media="print" href="css/main_style.css">
 <!--Icon code-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <!-- Visible Text at top of tab below-->
@@ -88,10 +89,9 @@
   <!-- Leaflet map here -->
   <div id="maprouting">
       <script src="javascript/routemap.js"></script>
-      <script src="javascript/PRINT.js"></script>
   </div>
   <div id="print" class="no-printme">
-    <button type="button" onclick="window.print(); return false;"><i class="fa fa-print"></i> Print this map</button>
+    <button type="button" onclick="window.print()" layout="landscape"><i class="fa fa-print"></i> Print this map</button>
   </div>
 <br>
   <div id="spacer"></div>

@@ -140,7 +140,13 @@ margin-bottom: 60px;
   position:inherit;
   padding: 20px;
   margin-top:30px;
-  margin-bottom:10px;
+}
+
+@media print{
+  maprouting{
+    width:100%;
+    position:center;
+  }
 }
 
 #basemaps-wrapper {
