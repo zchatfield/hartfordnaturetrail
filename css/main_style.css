@@ -89,19 +89,25 @@ a:hover {
   margin-right: 20px;
   position: relative;
   z-index: 1;
+  overflow: auto;
+  max-width: 50%;
 }
 
 #learn-more{
 height: 120px;
+max-height: 200px;
 width: 95vw;
 background-color: #d6eecd;
 color:#008000;
 text-align: center;
-padding:0px;
 margin-bottom: 30px;
 margin-top:0px;
 }
 
+#top-of-home{
+  width:100%;
+  max-height: 100%;
+}
 #greenspacetabs{
   padding-top:5px;
 }
@@ -123,6 +129,7 @@ text-align: inherit;
 font-weight: normal;
 padding:10px;
 overflow: auto;
+float:left;
 }
 
 #mapid{
@@ -131,6 +138,8 @@ overflow: auto;
   margin-top: 5px;
   position:relative;
   padding: inherit;
+  max-width: 60%;
+  min-width: 50%;
 }
 
 #maprouting{
@@ -138,6 +147,9 @@ overflow: auto;
   height: 580px;
   padding: 20px;
   position:inherit;
+}
+
+#contact{
 }
 
 @media print{
