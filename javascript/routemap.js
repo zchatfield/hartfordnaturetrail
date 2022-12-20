@@ -139,6 +139,7 @@ L.easyButton( 'fa-map-marker', function(){
 
       L.popup().setContent(container).setLatLng(e.latlng).openOn(map);
   });
+  map.flyTo([41.740664, -72.677950])
 }).addTo(map);
 
 
