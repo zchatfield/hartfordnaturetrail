@@ -38,18 +38,9 @@
   <link rel="stylesheet" href="https://opengeo.tech/maps/leaflet-search/src/leaflet-search.css">
   <script src="https://opengeo.tech/maps/leaflet-search/src/leaflet-search.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
-  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
 
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/1.2.2/fuse.min.js"></script>
 
   <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
   <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
@@ -63,7 +54,7 @@
 </head>
 
 <body>
-<!-- Put introductory info here - description of the nature trail and links to org. partners -->
+<!-- Introductory info here - description site, organization partners, etc. -->
 <div id="body-container" style="height:100%">
   <div id="header" style="height:2%">
     <h2>South Hartford Green Spaces</h2>
@@ -75,7 +66,7 @@
       The city of Hartford, Connecticut has a wealth of public green spaces.
       <br>We invite you to explore the parks, community gardens, and natural hidden gems in the Southern part of Hartford.</p>
     <p>Click on each green space to learn more about it or scroll down to see more information on each green space.
-      Use the search bar in the top left to look for your favorite spot.
+      Use the search bar in the top left to look for your favorite spot or feature.
       Click <a href="routemap.html">here</a> to explore routes from any location to your destination.</p>
     <p>This page is a collaborative project brought to you by <a href="https://www.laurenlittleedutainment.com/" target="_blank">Lauren Little Edutainment</a>
     and <a href="https://freecenter.us/" target="_blank">Free Center</a>. It was created by Zoe Chatfield and Emily Heltzel of Clark University.</p>
@@ -94,17 +85,18 @@
       <script src="javascript/map.js"></script>
   </div>
 </div>
-  <!--window for more information, maybe we can get it to populate based on map click -->
+  <!--More information header -->
   <div id="spacer"></div>
   <div id="learn-more" style="height:inherit;">
     <h1>Learn more about each green space <a href="#TC">below</a><h1> <!--anchor link is in Trinity College tab-->
     <h3>This is a curated list of green spaces that will be continuously updated based on community input.
     <br><br><a href="#header">Click here to return to the map.</a></h3>
-</div>
+  </div>
   <div id="spacer"></div>
+<!--Panels with more information on the green spaces -->
 <div id="greenspacetabs">
-    <button class="accordion" id="CH-tab">Cedar Hill Cemetery</button>
-    <div class="panel" data-target="CH-open">
+    <button class="accordion">Cedar Hill Cemetery</button>
+    <div class="panel">
       <p><b>Cedar Hill Cemetery</b> is more than just a place of burial. It has beautiful grounds for walking, biking, and exploring. You can learn more from their website <a href="https://www.cedarhillcemetery.org/grounds" target="_blank">here</a>.
         Enjoy the view of the Llyn Mawr pond and their open green space, called "ornamental foreground" on their <a href="https://cedarhillcemetery.org/wp-content/uploads/2013/09/Sectionmap-Model.pdf" target="_blank">visitors map</a>! Beyond this area, you will find a short nature walk through a lightly wooded part of the cemetary grounds.</p>
     </div>
@@ -194,11 +186,11 @@
       The <a href="https://www.instagram.com/friendsofzionhill/?hl=en" target="_blank">Friends of Zion Hill</a> have worked to beautify this space. Enjoy the flowers they've planted
       and check for future public gardening opportunities!</p>
     </div>
-
+<!--Anchor link to top of page -->
     <div>
       <p><a href="#header">Back to top</a></p>
     </div>
-
+<!--Copyright -->
     <div id="copyright">
         <script>
           var today = new Date();
@@ -230,6 +222,5 @@
 </div>
 
 </body>
-
 
 </html>

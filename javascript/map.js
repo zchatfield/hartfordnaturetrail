@@ -1,15 +1,5 @@
 
-// Map variable with center and zoom
-// var map = L.map('mapid').setView([41.74403206040221, -72.68307359815084], 14);
-//
-//
-// // Basemap -  Open Street Map
-//   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
-//       maxZoom: 20,
-//       id: 'mapbox/streets-v11',
-//       accessToken: mapbox_access_token,
-//   }).addTo(map);
-
+// Esri Basemaps
 const apiKey = arc_apikey;
 
 var map = L.map('mapid').setView([41.741026389505876, -72.6868740655906], 14);
@@ -24,7 +14,7 @@ var map = L.map('mapid').setView([41.741026389505876, -72.6868740655906], 14);
         "ArcGIS:ColoredPencil",
       ];
 
-      // the L.esri.Vector.vectorBasemapLayer basemap enum defaults to 'ArcGIS:Streets' if omitted
+  // Basemap layers beyond the default
       vectorTiles.Default = L.esri.Vector.vectorBasemapLayer(null, {
         apiKey
       });
@@ -85,25 +75,7 @@ var green = L.geoJson(greenspaces, {
     map.setView(e.latlng, 16);
   })
 
-//Suggested/created trails
-/*
-var suggested = L.geoJson(suggestedroutes, {
-        	style: function (feature) {
-        		return {
-              color: 'black',
-              fillOpacity: '0.6',
-              weight: 1
-            };
-        	},
-        	onEachFeature: function (feature, layer) {
-        		  layer.bindPopup(feature.properties.popupContent);
-        	},
-        }).addTo(map);
 
-  green.on('click', function(e){
-    map.setView(e.latlng, 16);
-  })
-*/
 // Reset View plug in
   L.control.resetView({
       position: "topleft",
@@ -132,7 +104,8 @@ L.control.scale().addTo(map);
 // Full Screen
 map.addControl(new L.Control.Fullscreen());
 
-// Search bar --> filtered option
+
+// Search bar --> with filtered option
 var fuse = new Fuse(greenspaces.features, {
   keys: [
     'properties.name',
@@ -173,41 +146,3 @@ var searchControl = new L.Control.Search({
 	});
 
 	map.addControl(searchControl);
-
-// Selector
-/*
-var selector = L.control({
-  position: 'topleft'
-});
-
-selector.onAdd = function(map) {
-  var div = L.DomUtil.create('div', 'mySelector');
-  div.innerHTML = '<select id="marker_select"><option value="init">(select a green space)</option></select>';
-  return div;
-};
-
-selector.addTo(map);
-
-green.eachLayer(function(layer) {
-  var optionElement = document.createElement("option");
-  optionElement.innerHTML = layer.feature.properties.name;
-  optionElement.value = layer._leaflet_id;
-  L.DomUtil.get("marker_select").appendChild(optionElement);
-});
-
-var marker_select = L.DomUtil.get("marker_select");
-
-L.DomEvent.addListener(marker_select, 'click', function(e) {
-  L.DomEvent.stopPropagation(e);
-});
-
-L.DomEvent.addListener(marker_select, 'change', changeHandler);
-
-function changeHandler(e) {
-  if (e.target.value == "init") {
-    map.closePopup();
-  } else {
-    green.getLayer(e.target.value).openPopup();
-  }
-}
-*/

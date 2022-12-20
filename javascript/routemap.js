@@ -2,14 +2,6 @@
 // Map variable with center and zoom
 var map = L.map('maprouting').setView([41.741026389505876, -72.6868740655906], 14);
 
-
-// Basemap -  Open Street Map
-  // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',{
-  //     maxZoom: 20,
-  //     id: 'mapbox/streets-v11',
-  //     accessToken: mapbox_access_token,
-  // }).addTo(map);
-
 // Esri Basemap
   const apiKey = arc_apikey;
 
@@ -104,29 +96,9 @@ legend.addTo(map);
 L.control.scale().addTo(map);
 
 
-// Search Bar
-/*
-var searchControl = new L.Control.Search({
-		layer: green,
-		propertyName: 'name',
-		marker: false,
-    position: "topleft",
-		moveToLocation: function(latlng, title, map) {
-  			map.setView(latlng, 16);
-		}
-	});
+// Full Screen
+map.addControl(new L.Control.Fullscreen());
 
-	searchControl.on('search:locationfound', function(e) {
-		if(e.layer._popup)
-			e.layer.openPopup();
-
-	}).on('search:collapsed', function(e) {
-		featuresLayer.eachLayer(function(layer) {
-		});
-	});
-
-	map.addControl(searchControl);
-*/
 
 /// Routing
 L.easyButton( 'fa-map-marker', function(){
@@ -140,9 +112,6 @@ L.easyButton( 'fa-map-marker', function(){
 
   var control = L.Routing.control({
       waypoints: [null],
-      // router: new L.Routing.osrmv1({
-      //   language: 'en',
-      // }),
       collapsible: true,
       routeWhileDragging: true,
       geocoder: L.Control.Geocoder.nominatim(),
@@ -172,55 +141,8 @@ L.easyButton( 'fa-map-marker', function(){
   });
 }).addTo(map);
 
-// Full Screen
-map.addControl(new L.Control.Fullscreen());
 
-/*
-// Search bar --> filtered option
-var fuse = new Fuse(greenspaces.features, {
-  keys: [
-    'properties.name',
-    'properties.description',
-  ]
-});
-
-var searchControl = new L.Control.Search({
-		layer: green,
-		propertyName: 'name',
-		marker: false,
-    autoType: true,
-    position: "topleft",
-		moveToLocation: function(latlng, title, map) {
-  			map.setView(latlng, 16);
-		},
-    filterData: function(text, records) {
-      var jsons = fuse.search(text),
-        ret = {}, key;
-
-      for(var i in jsons) {
-        key = jsons[i].properties.name;
-        ret[ key ]= records[key];
-      }
-
-      console.log(jsons,ret);
-      return ret;
-    }
-	});
-
-	searchControl.on('search:locationfound', function(e) {
-		if(e.layer._popup)
-			e.layer.openPopup();
-
-	}).on('search:collapsed', function(e) {
-		featuresLayer.eachLayer(function(layer) {
-		});
-	});
-
-	map.addControl(searchControl);
-
-*/
-// Selector
-
+// Selector for green spaces
 var selector = L.control({
   position: 'topleft'
 });
@@ -257,8 +179,6 @@ function changeHandler(e) {
 }
 
 // Selector for Routes
-// Selector
-
 var selector2 = L.control({
   position: 'topleft'
 });
@@ -293,21 +213,3 @@ function changeHandler2(e) {
     routes.getLayer(e.target.value).openPopup();
   }
 }
-
-//PRINT
-/*
-src="leaflet-easyPrint-gh-pages/src/index.js"
-
-L.easyPrint({
-	title: 'My awesome print button',
-	position: 'bottomright',
-	sizeModes: ['A4Portrait', 'A4Landscape']
-}).addTo(map);
-
-var printPlugin = L.easyPrint({
-	hidden: true,
-	sizeModes: ['A4Portrait']
-}).addTo(map);
-printPlugin.printMap('A4Portrait', 'MyFileName'); */
-
-//ZOOM SLIDER FULL CODE PLUG IN
